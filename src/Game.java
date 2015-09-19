@@ -19,8 +19,8 @@ public class Game {
 		this.dungeons.get(0);
 	}
 	
-	public void getUserEntry(String actions){
-		System.out.printf(actions);
+	public void getUserEntry(String instruction){
+		System.out.printf(instruction);
 		userEntry = scanEntry.nextLine();
 		this.interpretCommand();
 	}
@@ -33,23 +33,28 @@ public class Game {
 			(new FightCommand()).action(splittedCommand[1], this.dungeons.get(0));
 			break;
 		case "get":
+			(new DescriptionCommand()).action(splittedCommand[1], this.dungeons.get(0));
 			break;
-		case "use":
+		case "push":
+			(new ButtonCommand()).action(splittedCommand[1], this.dungeons.get(0));
 			break;
 		case "take":
+			(new ObjectCommand()).action(splittedCommand[1], this.dungeons.get(0));
+			break;
+		case "use":
+			(new ObjectCommand()).action(splittedCommand[1], this.dungeons.get(0));
+			break;
+		case "move":
+			(new ObjectCommand()).action(splittedCommand[1], this.dungeons.get(0));
 			break;
 		default:
-				
+			System.out.println("Unrecognized command");
 		}
-		/*
-		for(int i = 0; i < splittedCommand.length ; i++){
-		System.out.println(splittedCommand[i]);
-		}*/
 	}
 	
 	
 	public static void main(String[] args){
 		Game game = new Game();
-		game.getUserEntry("Quelles actions voulez vous réaliser\n");
+		game.getUserEntry("Quelle action voulez vous réaliser\n");
 	}
 }

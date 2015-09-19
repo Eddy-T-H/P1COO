@@ -1,4 +1,12 @@
+import java.util.List;
 
 public abstract class AbstractDungeon {
-	private int ballec;
+	protected Room currentRoom;
+	protected List<Stuff> inventory;
+	
+	public Room getCurrentRoom(){
+		return this.currentRoom;
+	}
+	
+	public abstract void interpretCommand(String command);
 }
