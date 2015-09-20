@@ -4,16 +4,19 @@ public class NormalExit extends ExitDecorator{
 	public NormalExit(Room room){
 		super.room = room;
 	}
+	
+	@Override
+	public String getDescriptionRoom(){
+		return this.room.getDescriptionRoom();
+	}
 
 	@Override
 	public void exit() {
-		// TODO Auto-generated method stub
 		System.out.println("You can exit this room");
 	}
 
 	@Override
-	public void action(String command) {
-		// TODO Auto-generated method stub
-		room.action(command);
+	public void action(String command, AbstractDungeon dungeon) {
+		room.action(command, dungeon);
 	}
 }

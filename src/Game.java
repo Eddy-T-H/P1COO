@@ -6,17 +6,16 @@ public class Game {
 	//Attributes 
 	private String userEntry;
 	private final Scanner scanEntry = new Scanner(System.in);
-	private List<AbstractDungeon> dungeons;
-	//private List<Stuff> stuff;
+	private List<AbstractDungeon> dungeons  = new ArrayList<>();
+	private int currentDungeon=0;
 	
 	//Methods
 	public Game(){
-		this.dungeons = new ArrayList<>();
 		this.dungeons.add(new ConcreteDungeon());
 	}
 	
 	public void start(){
-		this.dungeons.get(0);
+		this.dungeons.get(currentDungeon);
 	}
 	
 	public void getUserEntry(String instruction){
@@ -27,25 +26,25 @@ public class Game {
 	
 	public void interpretCommand(){
 		String[] splittedCommand;
-		splittedCommand = userEntry.split(" ",200);
+		splittedCommand = userEntry.split(" ",2);
 		switch (splittedCommand[0]){
 		case "go":
-			(new FightCommand()).action(splittedCommand[1], this.dungeons.get(0));
+			(new FightCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
 			break;
 		case "get":
-			(new DescriptionCommand()).action(splittedCommand[1], this.dungeons.get(0));
+			(new DescriptionCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
 			break;
 		case "push":
-			(new ButtonCommand()).action(splittedCommand[1], this.dungeons.get(0));
+			(new ButtonCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
 			break;
 		case "take":
-			(new ObjectCommand()).action(splittedCommand[1], this.dungeons.get(0));
+			(new ObjectCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
 			break;
 		case "use":
-			(new ObjectCommand()).action(splittedCommand[1], this.dungeons.get(0));
+			(new ObjectCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
 			break;
 		case "move":
-			(new ObjectCommand()).action(splittedCommand[1], this.dungeons.get(0));
+			(new MoveCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
 			break;
 		default:
 			System.out.println("Unrecognized command");
@@ -55,6 +54,8 @@ public class Game {
 	
 	public static void main(String[] args){
 		Game game = new Game();
+		while(true){
 		game.getUserEntry("Quelle action voulez vous réaliser\n");
+		}
 	}
 }
