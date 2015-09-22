@@ -46,6 +46,9 @@ public class Game {
 		case "move":
 			(new MoveCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
 			break;
+		case "help":
+			(new HelpCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
+			break;
 		default:
 			System.out.println("Unrecognized command");
 		}
@@ -55,7 +58,9 @@ public class Game {
 	public static void main(String[] args){
 		Game game = new Game();
 		while(true){
-		game.getUserEntry("Quelle action voulez vous réaliser\n");
+		game.getUserEntry("Bienvenue dans le donjon\n"
+				+ "Taper la command \"help commands\" pour afficher les commandes du jeu \n"
+				+ "Ou taper la commande \"help here\" pour afficher les commandes que vous pouvez utiliser dans votre room actuelle.\n");
 		}
 	}
 }

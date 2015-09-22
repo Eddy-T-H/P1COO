@@ -1,5 +1,3 @@
-import java.util.Map;
-
 public class MoveCommand implements InterfaceCommand{
 
 	@Override
