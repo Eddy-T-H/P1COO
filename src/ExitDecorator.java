@@ -6,5 +6,5 @@ public abstract class ExitDecorator extends Room {
 			return this.room;
 		}
 		
-		public abstract void exit();
+		public abstract void exit(AbstractDungeon dungeon, String command);
 }

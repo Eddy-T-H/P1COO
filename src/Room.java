@@ -47,5 +47,5 @@ public abstract class Room {
 	}
 	
 	abstract public void action(String command, AbstractDungeon dungeon);
-	public void exit(){}
+	public void exit(AbstractDungeon dungeon, String command){}
 }
