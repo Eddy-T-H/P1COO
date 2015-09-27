@@ -18,12 +18,17 @@ public abstract class AbstractDungeon {
 	}
         
         public boolean haveObject(String nameObject){
-            for (Stuff object : this.inventory){
+            if(!(this.inventory.isEmpty())){
+                for (Stuff object : this.inventory){
 			if( (object.getClass().getName().toLowerCase()).equals(nameObject)){
 				return true;
 			}
 		}
             return false;
+            }
+            else{
+                return false;
+            }
         }
 	
 	public void removeObject(Stuff object){
