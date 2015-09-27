@@ -13,6 +13,7 @@ import rooms.HiddenExit;
 public class ConcreteDungeon extends AbstractDungeon {
 	public ConcreteDungeon(){
 		List<Stuff> objects = new ArrayList<>();
+                this.player = new Player();
 		objects.add(new Potion());
 		objects.add(new Key());
 		this.currentRoom = new TreasureRoom(objects, "This is a treasure room");

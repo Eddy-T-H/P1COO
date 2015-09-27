@@ -20,11 +20,10 @@ public abstract class ExitDecorator extends Room {
                 
     @Override
                 public void exit(AbstractDungeon dungeon, String command){
-                    
                         boolean success=false;
                         for (Map.Entry<String, Room> roomRow : dungeon.getCurrentRoom().getNearRooms().entrySet()){
                             if(roomRow.getKey().toLowerCase().equals(command.toLowerCase())){
-                                    if(canExit(dungeon)){
+                                    if(((ExitDecorator)roomRow.getValue()).canExit(dungeon)){
                                     dungeon.setCurrentRoom(roomRow.getValue());
                                     System.out.println("You change of room");
                                     success = true;
@@ -34,7 +33,6 @@ public abstract class ExitDecorator extends Room {
                         if(!success){
                             System.out.println("You can't move that way");
                         }
-                    
             }
                     
                 

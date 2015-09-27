@@ -17,6 +17,20 @@ public class Player {
         public void addObject(Stuff object){
             this.inventory.add(object);
         }
+        
+        public boolean haveObject(String nameObject){
+		if(!(inventory.isEmpty())){
+			for (Stuff object : inventory){
+				if( (object.getClass().getSimpleName().toLowerCase()).equals(nameObject)){
+					return true;
+			}	
+		}	
+			return false;
+		}
+		else{
+			return false;
+          	}
+      	}
 	
 	public int dammagePlayer(){
 		return this.equipedWeapon.getBaseDamage()+
