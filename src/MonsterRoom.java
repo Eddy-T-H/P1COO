@@ -11,6 +11,10 @@ public class MonsterRoom extends Room {
         this.monster=monster;
         super.setDescriptionRoom(description);
     }
+    
+    public Monster getMonster(){
+        return this.monster;
+    }
 
 	@Override
 	public void action(String command, AbstractDungeon dungeon) {

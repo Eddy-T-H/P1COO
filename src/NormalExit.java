@@ -12,8 +12,8 @@ public class NormalExit extends ExitDecorator{
 	}
 
 	@Override
-	public void canExit(AbstractDungeon dungeon, String command) {
-		this.exit(dungeon, command);
+	public boolean canExit(AbstractDungeon dungeon) {
+		return true;
 	}
 
 	@Override

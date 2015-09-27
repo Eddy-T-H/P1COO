@@ -8,5 +8,10 @@
  * @author Antoine
  */
 public abstract class Monster {
+    boolean isAlive;
+    
+    public boolean isAlive(){
+        return this.isAlive;
+    }
     
 }

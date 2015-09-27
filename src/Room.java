@@ -45,7 +45,8 @@ public abstract class Room {
 	public Map<String,Room> getNearRooms(){
 		return this.around;
 	}
+        
+        public void exit(AbstractDungeon dungeon, String command){}
 	
 	abstract public void action(String command, AbstractDungeon dungeon);
-	public void canExit(AbstractDungeon dungeon, String command){}
 }

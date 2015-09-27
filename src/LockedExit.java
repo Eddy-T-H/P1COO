@@ -14,11 +14,12 @@ public class LockedExit extends ExitDecorator{
 	}
 
     @Override
-    public void canExit(AbstractDungeon dungeon, String command) {
+    public boolean canExit(AbstractDungeon dungeon) {
         if(this.room.getClass().getName().toLowerCase().equals("monsterroom")){
-            if(this.room.getMonster().isAlive()){
-                
-            }
+            return !((MonsterRoom)this.room).getMonster().isAlive();
+        }
+        else{
+            return dungeon.haveObject("key");
         }
     }
 

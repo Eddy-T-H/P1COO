@@ -16,6 +16,15 @@ public abstract class AbstractDungeon {
 	public void addObject(Stuff object){
 		this.inventory.add(object);
 	}
+        
+        public boolean haveObject(String nameObject){
+            for (Stuff object : this.inventory){
+			if( (object.getClass().getName().toLowerCase()).equals(nameObject)){
+				return true;
+			}
+		}
+            return false;
+        }
 	
 	public void removeObject(Stuff object){
 		this.inventory.remove(object);
