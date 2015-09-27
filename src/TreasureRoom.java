@@ -13,10 +13,10 @@ public class TreasureRoom extends Room {
 				objectList+=object.getClass().getName() + " ";
 			}
 			this.chest.addAll(theObjects);
-			super.setDescription(description + "\nYou see a chest in that room and after open it, You see its content : " + objectList);
+			super.setDescriptionRoom(description + "\nYou see a chest in that room and after open it, You see its content : " + objectList);
 		}
 		else{
-			super.setDescription(description);
+			super.setDescriptionRoom(description);
 		}
 	}
 	
@@ -33,7 +33,7 @@ public class TreasureRoom extends Room {
 		if(taken){
 			System.out.println("You take the " + this.chest.get(objectToTake).getClass().getName());
 			dungeon.addObject(this.chest.get(objectToTake));
-			this.setDescription(this.getDescriptionRoom().replace(this.chest.get(objectToTake).getClass().getName() + " ", ""));
+			this.setDescriptionRoom(this.getDescriptionRoom().replace(this.chest.get(objectToTake).getClass().getName() + " ", ""));
 			this.chest.remove(objectToTake);
 		}
 		else{

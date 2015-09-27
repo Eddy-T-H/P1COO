@@ -6,7 +6,7 @@ public abstract class Room {
 	private String descriptionAround="";
 	private Map<String,Room> around = new HashMap<>();
 	
-	protected void setDescription (String description){
+	protected void setDescriptionRoom (String description){
 		this.descriptionRoom=description;
 	}
 	
@@ -47,5 +47,5 @@ public abstract class Room {
 	}
 	
 	abstract public void action(String command, AbstractDungeon dungeon);
-	public void exit(AbstractDungeon dungeon, String command){}
+	public void canExit(AbstractDungeon dungeon, String command){}
 }

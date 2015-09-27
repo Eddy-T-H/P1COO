@@ -12,18 +12,8 @@ public class NormalExit extends ExitDecorator{
 	}
 
 	@Override
-	public void exit(AbstractDungeon dungeon, String command) {
-		boolean success=false;
-		for (Map.Entry<String, Room> room : dungeon.currentRoom.getNearRooms().entrySet()){
-			if(room.getKey().toLowerCase().equals(command.toLowerCase())){
-				dungeon.setCurrentRoom(room.getValue());
-				System.out.println("You change of room");
-				success = true;
-			}
-		}
-		if(!success){
-			System.out.println("You can't move that way");
-		}
+	public void canExit(AbstractDungeon dungeon, String command) {
+		this.exit(dungeon, command);
 	}
 
 	@Override
