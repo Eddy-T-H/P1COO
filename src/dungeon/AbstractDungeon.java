@@ -16,13 +16,13 @@ public abstract class AbstractDungeon {
 	}
 	
 	public void addObject(Stuff object){
-		this.player.getInventory().add(object);
+		this.player.addObject(object);
 	}
         
 	public boolean haveObject(String nameObject){
 		if(!(this.player.getInventory().isEmpty())){
 			for (Stuff object : this.player.getInventory()){
-				if( (object.getClass().getName().toLowerCase()).equals(nameObject)){
+				if( (object.getClass().getSimpleName().toLowerCase()).equals(nameObject)){
 					return true;
 			}	
 		}	

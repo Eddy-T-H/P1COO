@@ -15,7 +15,7 @@ public class TreasureRoom extends Room {
 		if(!(theObjects.isEmpty())){
 			String objectList = "";
 			for (Stuff object : theObjects){
-				objectList+=object.getClass().getName() + " ";
+				objectList+=object.getClass().getSimpleName() + " ";
 			}
 			this.chest.addAll(theObjects);
 			super.setDescriptionRoom(description + "\nYou see a chest in that room and after open it, You see its content : " + objectList);
@@ -30,15 +30,15 @@ public class TreasureRoom extends Room {
 		boolean taken = false;
 		int objectToTake = 0;
 		for (Stuff object : this.chest){
-			if( (object.getClass().getName().toLowerCase()).equals(command.toLowerCase())){
+			if( (object.getClass().getSimpleName().toLowerCase()).equals(command.toLowerCase())){
 				taken = true;
 				objectToTake = this.chest.indexOf(object);
 			}
 		}
 		if(taken){
-			System.out.println("You take the " + this.chest.get(objectToTake).getClass().getName());
+			System.out.println("You take the " + this.chest.get(objectToTake).getClass().getSimpleName());
 			dungeon.addObject(this.chest.get(objectToTake));
-			this.setDescriptionRoom(this.getDescriptionRoom().replace(this.chest.get(objectToTake).getClass().getName() + " ", ""));
+			this.setDescriptionRoom(this.getDescriptionRoom().replace(this.chest.get(objectToTake).getClass().getSimpleName() + " ", ""));
 			this.chest.remove(objectToTake);
 		}
 		else{

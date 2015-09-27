@@ -60,10 +60,11 @@ public class Game {
 	
 	public static void main(String[] args){
 		Game game = new Game();
-		while(true){
-		game.getUserEntry("Bienvenue dans le donjon\n"
+                System.out.println("Bienvenue dans le donjon\n"
 				+ "Taper la command \"help commands\" pour afficher les commandes du jeu \n"
 				+ "Ou taper la commande \"help here\" pour afficher les commandes que vous pouvez utiliser dans votre room actuelle.\n");
+		while(true){
+		game.getUserEntry("");
 		}
 	}
 }

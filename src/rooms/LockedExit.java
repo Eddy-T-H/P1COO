@@ -9,7 +9,7 @@ public class LockedExit extends ExitDecorator{
 
     @Override
     public boolean canExit(AbstractDungeon dungeon) {
-        if(super.room.getClass().getName().equals("MonsterRoom")){
+        if(super.room.getClass().getSimpleName().equals("MonsterRoom")){
             return !((MonsterRoom)this.room).getMonster().isAlive();
         }
         else{

@@ -6,13 +6,17 @@ import java.util.List;
 public class Player {
 	protected int maxHealth =100;
 	protected int healthpoint = maxHealth;
-	public static final List<Stuff> inventory = new ArrayList<>();
+	public List<Stuff> inventory = new ArrayList<>();
 	public Weapon equipedWeapon ;
 	
 	
 	public List<Stuff> getInventory (){
-		return Player.inventory;
+		return this.inventory;
 	}
+        
+        public void addObject(Stuff object){
+            this.inventory.add(object);
+        }
 	
 	public int dammagePlayer(){
 		return this.equipedWeapon.getBaseDamage()+

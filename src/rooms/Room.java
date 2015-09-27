@@ -43,7 +43,7 @@ public abstract class Room {
 			room.addNearRoom(place , this);
 		}
 		this.around.put(placementKey,room);
-		this.descriptionAround+= placementKey + ":" + room.getClass().getName() + " ";
+		this.descriptionAround+= placementKey + ":" + room.getClass().getSimpleName() + " ";
 	}
 
 	public Map<String,Room> getNearRooms(){
