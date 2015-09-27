@@ -1,4 +1,4 @@
-
+package dungeon;
 public class DescriptionCommand implements InterfaceCommand {
 	
 	@Override

@@ -1,6 +1,9 @@
+package dungeon;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
 
 public class Game {
 	//Attributes 
@@ -57,11 +60,10 @@ public class Game {
 	
 	public static void main(String[] args){
 		Game game = new Game();
-                System.out.println("Bienvenue dans le donjon\n"
+		while(true){
+		game.getUserEntry("Bienvenue dans le donjon\n"
 				+ "Taper la command \"help commands\" pour afficher les commandes du jeu \n"
 				+ "Ou taper la commande \"help here\" pour afficher les commandes que vous pouvez utiliser dans votre room actuelle.\n");
-		while(true){
-		game.getUserEntry("");
 		}
 	}
 }
