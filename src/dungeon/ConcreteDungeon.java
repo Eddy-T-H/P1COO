@@ -1,5 +1,14 @@
+package dungeon ;
 import java.util.ArrayList;
 import java.util.List;
+
+
+import rooms.NormalExit;
+import rooms.Room;
+import rooms.TreasureRoom;
+import rooms.LockedExit;
+import rooms.NormalRoom;
+import rooms.HiddenExit;
 
 public class ConcreteDungeon extends AbstractDungeon {
 	public ConcreteDungeon(){
