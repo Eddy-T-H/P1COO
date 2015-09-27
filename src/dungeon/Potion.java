@@ -1,3 +1,5 @@
+package dungeon;
+
 
 public class Potion extends Stuff{
 	public String toString(){

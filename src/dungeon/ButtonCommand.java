@@ -1,5 +1,7 @@
+package dungeon;
 
-public class EndRoom extends Room {
+
+public class ButtonCommand implements InterfaceCommand {
 
 	@Override
 	public void action(String command, AbstractDungeon dungeon) {

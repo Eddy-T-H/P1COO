@@ -1,3 +1,7 @@
+package rooms;
+import dungeon.AbstractDungeon;
+import monstres.Monster;
+
 
 /*import java.util.ArrayList;
 import java.util.List;*/

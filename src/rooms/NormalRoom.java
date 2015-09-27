@@ -1,3 +1,6 @@
+package rooms;
+import dungeon.AbstractDungeon;
+
 
 public class NormalRoom extends Room {
 	

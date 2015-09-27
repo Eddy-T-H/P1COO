@@ -1,3 +1,5 @@
+package dungeon;
+
 
 public class HelpCommand implements InterfaceCommand{
 

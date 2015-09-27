@@ -1,3 +1,6 @@
+package dungeon;
+import rooms.ExitDecorator;
+
 
 public class ObjectCommand implements InterfaceCommand {
 

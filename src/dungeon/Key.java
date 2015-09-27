@@ -1,3 +1,5 @@
+package dungeon;
+
 
 public class Key extends Stuff {
 	public String toString(){

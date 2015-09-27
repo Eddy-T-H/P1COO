@@ -1,5 +1,9 @@
+package rooms;
+
 import java.util.HashMap;
 import java.util.Map;
+
+import dungeon.AbstractDungeon;
 
 public abstract class Room {
 	private String descriptionRoom="";

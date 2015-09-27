@@ -1,5 +1,8 @@
+package rooms;
+import dungeon.AbstractDungeon;
 
-public class TrapRoom extends Room {
+
+public class EndRoom extends Room {
 
 	@Override
 	public void action(String command, AbstractDungeon dungeon) {

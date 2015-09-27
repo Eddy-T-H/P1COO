@@ -1,5 +1,10 @@
+package rooms;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import dungeon.AbstractDungeon;
+import dungeon.Stuff;
 
 public class TreasureRoom extends Room {
 	
