@@ -8,7 +8,6 @@ public class DescriptionCommand implements InterfaceCommand {
 				System.out.println(dungeon.getCurrentRoom().getDescriptionRoom());
 				break;
 			case "description around":
-
 				System.out.println(dungeon.getCurrentRoom().getDescriptionAround());
 				break;
 			default:
