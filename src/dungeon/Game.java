@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import rooms.*;
+
 
 public class Game {
 	
@@ -32,6 +34,23 @@ public class Game {
 		this.interpretCommand();
 	}
 	
+	public AbstractDungeon getCurrentDungeon(){
+		return this.dungeons.get(this.currentDungeon);
+	}
+	
+	public Room getCurrentRoom(){
+		return this.getCurrentDungeon().getCurrentRoom();
+	}
+	
+	public boolean isStuckInMonsterRoom(){
+		if(this.getCurrentRoom().getClass().getSimpleName().toLowerCase().equals("monsterroom")){
+			if(((MonsterRoom)this.getCurrentRoom()).getMonster().isAlive()){
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public void launchGame(){
         while(this.currentDungeon!=dungeons.size()){
         	 System.out.println("Welcome in the " + this.dungeons.get(currentDungeon).getClass().getSimpleName()  + "!\n"
@@ -48,30 +67,40 @@ public class Game {
 		String[] splittedCommand;
 		splittedCommand = userEntry.split(" ",2);
 		if(splittedCommand.length==2){
-			switch (splittedCommand[0]){
-			case "fight":
-				(new FightCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
-				break;
-			case "get":
-				(new DescriptionCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
-				break;
-			case "push":
-				(new ButtonCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
-				break;
-			case "take":
-				(new ObjectCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
-				break;
-			case "use":
-				(new ObjectCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
-				break;
-			case "move":
-				(new MoveCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
-				break;
-			case "help":
-				(new HelpCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
-				break;
-			default:
-				System.out.println("Unrecognized command");
+			if(!this.isStuckInMonsterRoom()){
+				switch (splittedCommand[0]){
+				case "get":
+					(new DescriptionCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
+					break;
+				case "push":
+					(new ButtonCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
+					break;
+				case "take":
+					(new ObjectCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
+					break;
+				case "use":
+					(new ObjectCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
+					break;
+				case "move":
+					(new MoveCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
+					break;
+				case "help":
+					(new HelpCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
+					break;
+				default:
+					System.out.println("Unrecognized command");
+				}
+			}else{
+				switch (splittedCommand[0]){
+				case "fight":
+					(new FightCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
+					break;
+				case "help":
+					(new HelpCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
+					break;
+				default:
+					System.out.println("Unrecognized command -- You can only use the fight command!");
+				}
 			}
 		}
 	}
@@ -84,4 +113,7 @@ public class Game {
 		Game game = new Game();
 		game.launchGame();
 	}
+	
+
+	
 }
