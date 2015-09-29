@@ -18,9 +18,7 @@ public class ConcreteDungeon extends AbstractDungeon {
 		List<Stuff> objects = new ArrayList<>();
         this.player = new Player();
 		objects.add(new MediumHealingPotion());
-//		objects.add(new Key());
-// Clef doit être créée en même temps qu'une lockedExit
-// A chaque LockedExit, une clef correspondante dans le donjon
+		objects.add(new Key());
 		this.currentRoom = new NormalExit(new TreasureRoom (objects, "This is a treasure room"));
 		this.currentRoom.addNearRoom("West", new LockedExit (new NormalRoom("This is a normal room")));
 		this.currentRoom.addNearRoom("East", new NormalExit (new NormalRoom("This is a normal room")));
