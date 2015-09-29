@@ -66,6 +66,10 @@ public class Player {
 				(int)(Math.random()*(double)this.equipedWeapon.getDamageRange()); 
 	}
 	
+	public void takeDamage(int dmg){
+		this.healthpoint=this.healthpoint-dmg;
+	}
+	
 	public void heal(int points){
 		if(this.getHealthpoint() + points <= this.getMaxHealth()){
 			this.setHealthpoint(this.getMaxHealth() + points);

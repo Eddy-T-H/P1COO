@@ -20,7 +20,33 @@ public abstract class Monster {
      */
     protected String name ;
 	
-    /**
+  
+    
+    
+    public int getHealthPoint() {
+		return healthPoint;
+	}
+
+	public int getBaseDamage() {
+		return baseDamage;
+	}
+
+
+	public int getDamageRange() {
+		return damageRange;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+	public void takeDamage(int dmg){
+		
+		this.healthPoint=this.healthPoint-dmg;
+		
+	}
+	/**
      * Test if the monster is alive (hp > 0)
      * @return boolean, true = alive, false = dead
      */
