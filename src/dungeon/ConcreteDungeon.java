@@ -7,23 +7,24 @@ import rooms.NormalExit;
 import rooms.TreasureRoom;
 import rooms.LockedExit;
 import rooms.NormalRoom;
+import rooms.Room;
+import rooms.ButtonRoom;
 import rooms.HiddenExit;
 
 public class ConcreteDungeon extends AbstractDungeon {
 	public ConcreteDungeon(){
+		Room room;
 		List<Stuff> objects = new ArrayList<>();
-                this.player = new Player();
+        this.player = new Player();
 		objects.add(new Potion());
 		objects.add(new Key());
-		this.currentRoom = new TreasureRoom(objects, "This is a treasure room");
-		this.currentRoom = new NormalExit(this.currentRoom);
+		this.currentRoom = new NormalExit(new TreasureRoom (objects, "This is a treasure room"));
 		this.currentRoom.addNearRoom("West", new LockedExit (new NormalRoom("This is a normal room")));
 		this.currentRoom.addNearRoom("East", new NormalExit (new NormalRoom("This is a normal room")));
 		this.currentRoom.addNearRoom("North", new HiddenExit (new NormalRoom("This is a normal room")));
-	}
-
-	@Override
-	public void interpretCommand(String command) {
-		this.currentRoom.action(command, this);
+		room=this.currentRoom.getNearRooms().get("West");
+		room.addNearRoom("North", new NormalExit (new ButtonRoom("This is a normal room")));
+		room=room.getNearRooms().get("North");
+		room.addNearRoom("North", new HiddenExit (new NormalRoom("This is a normal room")));
 	}
 }

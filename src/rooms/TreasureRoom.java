@@ -38,7 +38,7 @@ public class TreasureRoom extends Room {
 		if(taken){
 			System.out.println("You take the " + this.chest.get(objectToTake).getClass().getSimpleName());
 			dungeon.getPlayer().addObject(this.chest.get(objectToTake));
-                        this.getDescriptionRoom().replace(this.chest.get(objectToTake).getClass().getSimpleName() + " ", "");
+            this.getDescriptionRoom().replace(this.chest.get(objectToTake).getClass().getSimpleName() + " ", "");
 			this.chest.remove(objectToTake);
 		}
 		else{

@@ -2,7 +2,6 @@ package rooms;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import dungeon.AbstractDungeon;
 
 public abstract class Room {
@@ -13,6 +12,7 @@ public abstract class Room {
 	protected void setDescriptionRoom (String description){
 		this.descriptionRoom=description;
 	}
+
 	
 	public String getDescriptionRoom(){
 		return this.descriptionRoom;

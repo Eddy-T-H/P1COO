@@ -11,13 +11,14 @@ public class HiddenExit extends ExitDecorator{
 
     @Override
     public boolean canExit(AbstractDungeon dungeon) {
+    	if(this.room.getClass().getSimpleName().equals("ButtonRoom")){
+    		return ((ButtonRoom)this.room).isButtonPushed();
+    	}else
         return !isHidden;
     }
     
-    @Override
-    public String getDescriptionRoom(){
-        isHidden=false;
-        return this.room.getDescriptionRoom() + "You discovered a hidden exit";
+    public void discoverExit(){
+    	this.isHidden=false;
     }
 
     @Override
