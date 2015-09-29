@@ -37,4 +37,9 @@ public abstract class ExitDecorator extends Room {
                     
                 
                 public abstract boolean canExit(AbstractDungeon dungeon);
+                
+      @Override
+      public void action(String command, AbstractDungeon dungeon) {
+    	  room.action(command, dungeon);
+      }
 }

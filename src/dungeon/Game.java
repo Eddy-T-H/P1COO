@@ -32,6 +32,18 @@ public class Game {
 		this.interpretCommand();
 	}
 	
+	public void launchGame(){
+        while(this.currentDungeon!=dungeons.size()){
+        	 System.out.println("Welcome in the " + this.dungeons.get(currentDungeon).getClass().getSimpleName()  + "!\n"
+     				+ "Enter \"help commands\" to get informations on game's commands. \n"
+     				+ "Or enter \"help here\" to get commands you can use in your current room.");
+			while(!this.dungeons.get(currentDungeon).isFinished()){
+				this.getUserEntry("");
+			}
+			currentDungeon++;
+        }
+	}
+	
 	public void interpretCommand(){
 		String[] splittedCommand;
 		splittedCommand = userEntry.split(" ",2);
@@ -70,11 +82,6 @@ public class Game {
 	 */
 	public static void main(String[] args){
 		Game game = new Game();
-                System.out.println("Welcome in the dungeon !\n"
-				+ "Enter \"help commands\" to get informations on game's commands. \n"
-				+ "Or enter \"help here\" to get commands you can use in your current room.\n");
-		while(true){
-		game.getUserEntry("");
-		}
+		game.launchGame();
 	}
 }
