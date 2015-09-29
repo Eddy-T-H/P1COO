@@ -3,6 +3,7 @@ package monstres;
 
 public class Goblin extends Monster{
 
+	// Goblin constructor
 	public Goblin(){
 		super.name="Goblin";
 		super.healthPoint=30;

@@ -44,24 +44,23 @@ public class Player {
 		return this.inventory;
 	}
         
-        public void addObject(Stuff object){
-            this.inventory.add(object);
-        }
-        
-        public boolean haveObject(String nameObject){
-		if(!(inventory.isEmpty())){
-			for (Stuff object : inventory){
-				if( (object.getClass().getSimpleName().toLowerCase()).equals(nameObject)){
+	public void addObject(Stuff object){
+	    this.inventory.add(object);
+	}
+
+	public boolean haveObject(String nameObject) {
+		if (!(inventory.isEmpty())) {
+			for (Stuff object : inventory) {
+				if ((object.getClass().getSimpleName().toLowerCase()).equals(nameObject)) {
 					return true;
-			}	
-		}	
+				}
+			}
+			return false;
+		} else {
 			return false;
 		}
-		else{
-			return false;
-          	}
-      	}
-	
+	}
+
 	public int damagePlayer(){
 		return this.equipedWeapon.getBaseDamage()+
 				(int)(Math.random()*(double)this.equipedWeapon.getDamageRange()); 

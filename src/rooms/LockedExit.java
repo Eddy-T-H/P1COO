@@ -1,10 +1,14 @@
 package rooms;
 
 import dungeon.AbstractDungeon;
+import stuff.Key;
 public class LockedExit extends ExitDecorator{
     
+	boolean locked;
+	
     public LockedExit(Room room){
 		super.room = room;
+		this.locked = true;
 	}
 
     @Override
@@ -17,6 +21,13 @@ public class LockedExit extends ExitDecorator{
         }
     }
 
+    /*public void unlockWithKey(Key k){
+    	if(k.getRoom()==this){
+    		this.locked = false;
+    	}
+    }
+    */
+    
     @Override
     public void action(String command, AbstractDungeon dungeon) {
         this.room.action(command, dungeon);

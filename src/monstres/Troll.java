@@ -4,6 +4,7 @@ package monstres;
 
 public class Troll extends Monster{	
 	
+	// Troll Constructor
 	public Troll(){
 		super.name="Troll";
 		super.healthPoint=60;
