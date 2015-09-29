@@ -6,17 +6,22 @@ import java.util.Scanner;
 
 
 public class Game {
+	
+	
 	//Attributes 
 	private String userEntry;
 	private final Scanner scanEntry = new Scanner(System.in);
 	private List<AbstractDungeon> dungeons  = new ArrayList<>();
 	private int currentDungeon=0;
 	
-	//Methods
+	
+	//Constructor
 	public Game(){
 		this.dungeons.add(new ConcreteDungeon());
 	}
 	
+	
+	//Methods
 	public void start(){
 		this.dungeons.get(currentDungeon);
 	}
@@ -59,12 +64,15 @@ public class Game {
 		}
 	}
 	
-	
+	/**
+	 * Main function.
+	 * Used to launch the game and create a dungeon.
+	 */
 	public static void main(String[] args){
 		Game game = new Game();
-                System.out.println("Bienvenue dans le donjon\n"
-				+ "Taper la command \"help commands\" pour afficher les commandes du jeu \n"
-				+ "Ou taper la commande \"help here\" pour afficher les commandes que vous pouvez utiliser dans votre room actuelle.\n");
+                System.out.println("Welcome in the dungeon !\n"
+				+ "Enter \"help commands\" to get informations on game's commands. \n"
+				+ "Or enter \"help here\" to get commands you can use in your current room.\n");
 		while(true){
 		game.getUserEntry("");
 		}

@@ -5,6 +5,7 @@ import java.util.List;
 
 import rooms.NormalExit;
 import rooms.TreasureRoom;
+import stuff.*;
 import rooms.LockedExit;
 import rooms.NormalRoom;
 import rooms.Room;
@@ -16,7 +17,7 @@ public class ConcreteDungeon extends AbstractDungeon {
 		Room room;
 		List<Stuff> objects = new ArrayList<>();
         this.player = new Player();
-		objects.add(new Potion());
+		objects.add(new MediumHealingPotion());
 		objects.add(new Key());
 		this.currentRoom = new NormalExit(new TreasureRoom (objects, "This is a treasure room"));
 		this.currentRoom.addNearRoom("West", new LockedExit (new NormalRoom("This is a normal room")));

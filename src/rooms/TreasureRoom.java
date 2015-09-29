@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import dungeon.AbstractDungeon;
-import dungeon.Stuff;
+import stuff.Stuff;
 
 public class TreasureRoom extends Room {
 	

@@ -4,6 +4,7 @@ import java.util.Map;
 
 import rooms.HiddenExit;
 import rooms.Room;
+import stuff.Stuff;
 
 public abstract class AbstractDungeon {
 	protected Room currentRoom;
