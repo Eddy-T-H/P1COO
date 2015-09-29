@@ -30,5 +30,7 @@ public class FightCommand implements InterfaceCommand {
 		}else{
 			System.out.println("You are not in a monsterRoom .");
 		}
+
+		dungeon.getCurrentRoom().action(command, dungeon);
 	}
 }

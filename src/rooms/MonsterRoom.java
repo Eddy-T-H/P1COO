@@ -25,4 +25,7 @@ public class MonsterRoom extends Room {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	
+	
 }

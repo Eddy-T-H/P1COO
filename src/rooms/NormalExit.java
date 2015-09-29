@@ -12,8 +12,4 @@ public class NormalExit extends ExitDecorator{
 		return true;
 	}
 
-	@Override
-	public void action(String command, AbstractDungeon dungeon) {
-		room.action(command, dungeon);
-	}
 }

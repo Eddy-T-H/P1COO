@@ -9,6 +9,7 @@ import stuff.Stuff;
 public abstract class AbstractDungeon {
 	protected Room currentRoom;
 	protected Player player;
+	protected boolean dungeonIsFinished=false;
 	
 	public Room getCurrentRoom(){
 		return this.currentRoom;
@@ -28,6 +29,13 @@ public abstract class AbstractDungeon {
 	
 	public void interpretCommand(String command) {
 		this.currentRoom.action(command, this);
+	}
+	
+	public boolean isFinished(){
+		return this.dungeonIsFinished;
+	}
+	public void gameFinished(){
+		this.dungeonIsFinished=true;
 	}
 	
 	public boolean roomHasHiddenExit(){

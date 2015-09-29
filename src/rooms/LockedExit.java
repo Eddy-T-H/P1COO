@@ -27,9 +27,4 @@ public class LockedExit extends ExitDecorator{
     	}
     }
     */
-    
-    @Override
-    public void action(String command, AbstractDungeon dungeon) {
-        this.room.action(command, dungeon);
-    }
 }
