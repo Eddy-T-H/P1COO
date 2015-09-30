@@ -1,24 +1,27 @@
 package dungeon;
 
+import monstres.Monster;
 import rooms.MonsterRoom;
 
 public class FightCommand implements InterfaceCommand {
 	
 	@Override
 	public void action(String command, AbstractDungeon dungeon) {
-		if (dungeon.getCurrentRoom().getClass().getSimpleName().equals("MonsterRoom")){
+		if (dungeon.getCurrentRoom().getRoom().getClass().getSimpleName().toLowerCase().equals("monsterroom")){
 			switch(command){
 			case "attack":
-				int dmg=dungeon.getPlayer().damagePlayer();
+				Monster monster = ((MonsterRoom)dungeon.getCurrentRoom()).getMonster();
+				Player player = dungeon.getPlayer();
+				int dmg = dungeon.getPlayer().damagePlayer();
 				
-				System.out.println("you hit for"+dmg+"damage");
-				((MonsterRoom)dungeon.getCurrentRoom()).getMonster().takeDamage(dmg);
+				System.out.println(monster.getName() + " lost " + dmg + " HP !");
+				monster.takeDamage(dmg);
 				
-				dmg=((MonsterRoom)dungeon.getCurrentRoom()).getMonster().damageMonster();
-				System.out.println("you got hit for"+dmg+"damage");
-				dungeon.getPlayer().takeDamage(dmg);
+				dmg=monster.damageMonster();
+				System.out.println(monster.getName() + " attacked you ! \nYou lost " + dmg + " HP.");
+				player.takeDamage(dmg);
 				
-				System.out.println("you have "+dungeon.getPlayer().getHealthpoint()+"HealthPoint left");
+				System.out.println("You have " + player.getHealthpoint() + "HP left");
 				
 				break;
 			case "potion":
