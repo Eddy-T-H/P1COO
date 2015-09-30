@@ -19,4 +19,5 @@ public class ButtonRoom extends Room {
 	public boolean isButtonPushed(){
 		return this.pushedButton;
 	}
+
 }

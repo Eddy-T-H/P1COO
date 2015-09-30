@@ -21,10 +21,4 @@ public class LockedExit extends ExitDecorator{
         }
     }
 
-    /*public void unlockWithKey(Key k){
-    	if(k.getRoom()==this){
-    		this.locked = false;
-    	}
-    }
-    */
 }
