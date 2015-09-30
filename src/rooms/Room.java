@@ -13,6 +13,9 @@ public abstract class Room {
 		this.descriptionRoom=description;
 	}
 
+	public Room getRoom(){
+		return this;
+	}
 	
 	public String getDescriptionRoom(){
 		return this.descriptionRoom;

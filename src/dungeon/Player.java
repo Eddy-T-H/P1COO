@@ -45,7 +45,7 @@ public class Player {
 	}
         
 	public void addObject(Stuff object){
-	    this.inventory.add(object);
+	    this.getInventory().add(object);
 	}
 
 	public boolean haveObject(String nameObject) {
@@ -62,12 +62,16 @@ public class Player {
 	}
 
 	public int damagePlayer(){
-		return this.equipedWeapon.getBaseDamage()+
-				(int)(Math.random()*(double)this.equipedWeapon.getDamageRange()); 
+		return this.getEquipedWeapon().getBaseDamage()+
+				(int)(Math.random()*(double)this.getEquipedWeapon().getDamageRange()); 
 	}
 	
 	public void takeDamage(int dmg){
-		this.healthpoint=this.healthpoint-dmg;
+		if(this.getHealthpoint() - dmg > 0){
+			this.setHealthpoint(this.getHealthpoint() - dmg);
+		}else{
+			this.setHealthpoint(0);
+		}
 	}
 	
 	public void heal(int points){
@@ -75,6 +79,14 @@ public class Player {
 			this.setHealthpoint(this.getMaxHealth() + points);
 		}else{
 			this.setHealthpoint(this.getMaxHealth());
+		}
+	}
+	
+	public boolean isDead(){
+		if(this.getHealthpoint() <= 0){
+			return true;
+		}else{
+			return false;
 		}
 	}
 	

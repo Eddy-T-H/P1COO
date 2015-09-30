@@ -18,7 +18,7 @@ public class HelpCommand implements InterfaceCommand{
 					+ "help\n");
 			break;
 		case "here":
-			switch(dungeon.getCurrentRoom().getClass().getSimpleName().toLowerCase()){
+			switch(dungeon.getCurrentRoom().getRoom().getClass().getSimpleName().toLowerCase()){
 				case "buttonroom":
 					System.out.println("move\n");
 					System.out.println("push\n");
