@@ -3,7 +3,6 @@ package monstresTest;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertTrue;
-import static junit.framework.Assert.fail;
 import junit.framework.TestCase;
 import monstres.Monster;
 import monstres.Troll;
@@ -86,7 +85,7 @@ public class TrollTest extends TestCase {
      */
     @Test
 	public void testDamageMonster() {
-		fail("Not yet implemented"); // TODO
+		assertTrue(monster.damageMonster()<=(monster.getBaseDamage()+monster.getDamageRange()));
 	}
 
 }

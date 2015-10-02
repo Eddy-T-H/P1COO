@@ -128,7 +128,7 @@ public class PlayerTest extends TestCase{
      */
     @Test
 	public void testDamagePlayer() {
-		fail("Random"); // TODO
+		assertTrue(player.damagePlayer()<=(player.getEquipedWeapon().getBaseDamage()+player.getEquipedWeapon().getDamageRange()));
 	}
 
     /**

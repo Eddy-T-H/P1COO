@@ -86,7 +86,7 @@ public class GoblinTest extends TestCase {
      */
     @Test
 	public void testDamageMonster() {
-		fail("Not yet implemented"); // TODO
+		assertTrue(monster.damageMonster()<=(monster.getBaseDamage()+monster.getDamageRange()));
 	}
 
 }
