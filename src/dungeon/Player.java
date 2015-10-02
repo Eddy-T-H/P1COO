@@ -3,6 +3,7 @@ package dungeon;
 import java.util.ArrayList;
 import java.util.List;
 
+import stuff.Fists;
 import stuff.HealingPotion;
 import stuff.SharpeningPotion;
 import stuff.Stuff;
@@ -16,6 +17,11 @@ public class Player {
 	public List<Stuff> inventory = new ArrayList<>();
 	public Weapon equipedWeapon ;
 	
+	// Builder
+	
+	public Player(){
+		this.setEquipedWeapon(new Fists());
+	}
 	
 	//Methods
 	public int getMaxHealth() {
