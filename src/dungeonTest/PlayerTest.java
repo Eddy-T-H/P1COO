@@ -1,21 +1,41 @@
 package dungeonTest;
 
-import static org.junit.Assert.*;
+import dungeon.Player;
+import junit.framework.TestCase;
 
 import org.junit.Test;
+import stuff.HealingPotion;
+import stuff.MediumHealingPotion;
+import stuff.ShortSword;
+import stuff.Stuff;
+import stuff.Weapon;
 
 /**
  *
  * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
-public class PlayerTest {
+public class PlayerTest extends TestCase{
+    
+    protected Player player;
+        
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+        player = new Player();
+    }
+
+    @Override
+    protected void tearDown() throws Exception {
+        super.tearDown();
+        player = null;
+    }
 
     /**
      *
      */
     @Test
 	public void testGetMaxHealth() {
-		fail("Not yet implemented"); // TODO
+		assertEquals(player.getMaxHealth(),100);
 	}
 
     /**
@@ -23,7 +43,8 @@ public class PlayerTest {
      */
     @Test
 	public void testSetMaxHealth() {
-		fail("Not yet implemented"); // TODO
+		player.setMaxHealth(200);
+                assertEquals(player.getMaxHealth(),200);
 	}
 
     /**
@@ -31,7 +52,7 @@ public class PlayerTest {
      */
     @Test
 	public void testGetHealthpoint() {
-		fail("Not yet implemented"); // TODO
+		assertEquals(player.getHealthpoint(),100);
 	}
 
     /**
@@ -39,7 +60,8 @@ public class PlayerTest {
      */
     @Test
 	public void testSetHealthpoint() {
-		fail("Not yet implemented"); // TODO
+		player.setHealthpoint(50);
+                assertEquals(player.getHealthpoint(),50);
 	}
 
     /**
@@ -47,7 +69,7 @@ public class PlayerTest {
      */
     @Test
 	public void testGetEquipedWeapon() {
-		fail("Not yet implemented"); // TODO
+		player.getEquipedWeapon();
 	}
 
     /**
@@ -55,7 +77,19 @@ public class PlayerTest {
      */
     @Test
 	public void testSetEquipedWeapon() {
-		fail("Not yet implemented"); // TODO
+                Weapon weapon = new ShortSword();
+                player.setEquipedWeapon(weapon);
+		player.getEquipedWeapon();
+	}
+        
+   /**
+     *
+     */
+    @Test
+	public void testAddObject() {
+		Stuff weapon = new ShortSword();
+                player.addObject(weapon);
+                player.getInventory();
 	}
 
     /**
@@ -63,23 +97,20 @@ public class PlayerTest {
      */
     @Test
 	public void testGetInventory() {
-		fail("Not yet implemented"); // TODO
+		Stuff weapon = new ShortSword();
+                player.addObject(weapon);
+                player.getInventory();
 	}
 
-    /**
-     *
-     */
-    @Test
-	public void testAddObject() {
-		fail("Not yet implemented"); // TODO
-	}
 
     /**
      *
      */
     @Test
 	public void testPrintInventory() {
-		fail("Not yet implemented"); // TODO
+		Stuff weapon = new ShortSword();
+                player.addObject(weapon);
+                player.printInventory();
 	}
 
     /**
@@ -87,7 +118,9 @@ public class PlayerTest {
      */
     @Test
 	public void testHaveObject() {
-		fail("Not yet implemented"); // TODO
+		Stuff weapon = new ShortSword();
+                player.addObject(weapon);
+                assertTrue(player.haveObject("ShortSword"));
 	}
 
     /**
@@ -95,7 +128,7 @@ public class PlayerTest {
      */
     @Test
 	public void testDamagePlayer() {
-		fail("Not yet implemented"); // TODO
+		assertTrue(player.damagePlayer()<=(player.getEquipedWeapon().getBaseDamage()+player.getEquipedWeapon().getDamageRange()));
 	}
 
     /**
@@ -103,7 +136,8 @@ public class PlayerTest {
      */
     @Test
 	public void testTakeDamage() {
-		fail("Not yet implemented"); // TODO
+		player.takeDamage(20);
+                assertEquals(player.getHealthpoint(),80);
 	}
 
     /**
@@ -111,7 +145,10 @@ public class PlayerTest {
      */
     @Test
 	public void testUseHealingPotion() {
-		fail("Not yet implemented"); // TODO
+                HealingPotion pot = new MediumHealingPotion();
+		player.takeDamage(25);
+                player.useHealingPotion(pot);
+                assertEquals(player.getHealthpoint(),85);
 	}
 
     /**
@@ -127,7 +164,9 @@ public class PlayerTest {
      */
     @Test
 	public void testIsDead() {
-		fail("Not yet implemented"); // TODO
+		assertFalse(player.isDead());
+                player.takeDamage(200);
+                assertTrue(player.isDead());
 	}
 
 }
