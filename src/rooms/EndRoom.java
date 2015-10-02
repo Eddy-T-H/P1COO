@@ -25,5 +25,15 @@ public class EndRoom extends Room {
 	public void action(String command, AbstractDungeon dungeon) {
 		dungeon.gameFinished();
 	}
+    
+    
+    /**
+     * Test if the room is an end room
+     * @return true or false
+     */
+    @Override
+    public boolean isAnEndRoom(){
+    	return true;
+    }
 
 }
