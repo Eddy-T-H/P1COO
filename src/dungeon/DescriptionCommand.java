@@ -1,7 +1,17 @@
 package dungeon;
+
+/**
+ *
+ * @author
+ */
 public class DescriptionCommand implements InterfaceCommand {
 	
-	@Override
+    /**
+     *
+     * @param command
+     * @param dungeon
+     */
+    @Override
 	public void action(String command, AbstractDungeon dungeon) {
 		switch(command){
 			case "description room":

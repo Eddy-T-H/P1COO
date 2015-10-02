@@ -10,6 +10,10 @@ import monstres.Monster;
 
 import org.junit.Test;
 
+/**
+ *
+ * @author
+ */
 public class GoblinTest extends TestCase {
     
         private Monster monster;
@@ -26,40 +30,61 @@ public class GoblinTest extends TestCase {
         monster = null;
     }
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testGetHealthPoint() {
             assertEquals(monster.getHealthPoint(),30);
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testGetBaseDamage() {
             assertEquals(monster.getBaseDamage(),5);
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testGetDamageRange() {
             assertEquals(monster.getDamageRange(),3);
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testGetName() {
             assertEquals(monster.getDamageRange(),"Goblin");
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testTakeDamage() {
             monster.takeDamage(10);
             assertEquals(monster.getHealthPoint(),20);
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testIsAlive() {
             assertTrue(monster.isAlive());
             monster.takeDamage(31);
             assertFalse(monster.isAlive());
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testDamageMonster() {
 		fail("Not yet implemented"); // TODO
 	}

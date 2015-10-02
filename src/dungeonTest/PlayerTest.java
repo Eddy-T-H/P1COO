@@ -4,79 +4,128 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+/**
+ *
+ * @author
+ */
 public class PlayerTest {
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testGetMaxHealth() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testSetMaxHealth() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testGetHealthpoint() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testSetHealthpoint() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testGetEquipedWeapon() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testSetEquipedWeapon() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testGetInventory() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testAddObject() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testPrintInventory() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testHaveObject() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testDamagePlayer() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testTakeDamage() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testUseHealingPotion() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testUseSharpeningPotion() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testIsDead() {
 		fail("Not yet implemented"); // TODO
 	}

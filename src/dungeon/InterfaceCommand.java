@@ -1,9 +1,16 @@
 package dungeon;
 
-
-
+/**
+ *
+ * @author
+ */
 public interface InterfaceCommand {
 	
-	public abstract void action(String command, AbstractDungeon dungeon);
+    /**
+     *
+     * @param command
+     * @param dungeon
+     */
+    public abstract void action(String command, AbstractDungeon dungeon);
 	
 }

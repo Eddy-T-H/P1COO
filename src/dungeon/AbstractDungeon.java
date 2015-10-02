@@ -6,39 +6,87 @@ import rooms.HiddenExit;
 import rooms.Room;
 import stuff.Stuff;
 
+/**
+ *
+ * @author
+ */
 public abstract class AbstractDungeon {
-	protected Room currentRoom;
-	protected Player player;
-	protected boolean dungeonIsFinished=false;
+
+    /**
+     *
+     */
+    protected Room currentRoom;
+
+    /**
+     *
+     */
+    protected Player player;
+
+    /**
+     *
+     */
+    protected boolean dungeonIsFinished=false;
 	
-	public Room getCurrentRoom(){
+    /**
+     *
+     * @return
+     */
+    public Room getCurrentRoom(){
 		return this.currentRoom;
 	}
 	
-	public void setCurrentRoom(Room newCurrentRoom){
+    /**
+     *
+     * @param newCurrentRoom
+     */
+    public void setCurrentRoom(Room newCurrentRoom){
 		this.currentRoom = newCurrentRoom;
 	}
         
+    /**
+     *
+     * @return
+     */
     public Player getPlayer(){
         return this.player;
     }
 
-	public void removeObject(Stuff object){
+    /**
+     *
+     * @param object
+     */
+    public void removeObject(Stuff object){
 		this.player.getInventory().remove(object);
 	}
 
-public void interpretCommand(String command) {
+    /**
+     *
+     * @param command
+     */
+    public void interpretCommand(String command) {
 		this.currentRoom.action(command, this);
 	}
 	
-	public boolean isFinished(){
+    /**
+     *
+     * @return
+     */
+    public boolean isFinished(){
 		return this.dungeonIsFinished;
 	}
-	public void gameFinished(){
+
+    /**
+     *
+     */
+    public void gameFinished(){
 		this.dungeonIsFinished=true;
 	}
 	
-	public boolean roomHasHiddenExit(){
+    /**
+     *
+     * @return
+     */
+    public boolean roomHasHiddenExit(){
 		for (Map.Entry<String, Room> roomRow : currentRoom.getNearRooms().entrySet()){
             if(roomRow.getValue().getClass().getSimpleName().equals("HiddenExit")){
             	((HiddenExit)roomRow.getValue()).discoverExit();

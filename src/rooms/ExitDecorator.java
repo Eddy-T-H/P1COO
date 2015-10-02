@@ -5,19 +5,39 @@ import java.util.Map;
 
 import dungeon.AbstractDungeon;
 
-
+/**
+ *
+ * @author 
+ */
 public abstract class ExitDecorator extends Room {
+
+    /**
+     *
+     */
     protected Room room;
 		
+    /**
+     *
+     * @return
+     */
     public Room getRoom(){
         return this.room;
     }
     
+    /**
+     *
+     * @return
+     */
     @Override
     public String getDescriptionRoom(){
         return this.room.getDescriptionRoom();
     }
                 
+    /**
+     *
+     * @param dungeon
+     * @param command
+     */
     @Override
                 public void exit(AbstractDungeon dungeon, String command){
                         boolean success=false;
@@ -35,10 +55,19 @@ public abstract class ExitDecorator extends Room {
                         }
             }
                     
+    /**
+     *
+     * @param dungeon
+     * @return
+     */
+    public abstract boolean canExit(AbstractDungeon dungeon);
                 
-                public abstract boolean canExit(AbstractDungeon dungeon);
-                
-      @Override
+    /**
+     *
+     * @param command
+     * @param dungeon
+     */
+    @Override
       public void action(String command, AbstractDungeon dungeon) {
     	  room.action(command, dungeon);
       }

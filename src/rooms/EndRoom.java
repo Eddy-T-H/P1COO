@@ -1,14 +1,26 @@
 package rooms;
 import dungeon.AbstractDungeon;
 
-
+/**
+ *
+ * @author 
+ */
 public class EndRoom extends Room {
 	
-	public EndRoom(String description){
+    /**
+     *
+     * @param description
+     */
+    public EndRoom(String description){
 		super.setDescriptionRoom(description);
 	}
 
-	@Override
+    /**
+     *
+     * @param command
+     * @param dungeon
+     */
+    @Override
 	public void action(String command, AbstractDungeon dungeon) {
 		dungeon.gameFinished();
 	}

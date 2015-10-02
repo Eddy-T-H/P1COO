@@ -7,11 +7,20 @@ import monstres.Monster;
 import rooms.MonsterRoom;
 import stuff.Stuff;
 
+/**
+ *
+ * @author
+ */
 public class FightCommand implements InterfaceCommand {
 
 	Scanner sc = new Scanner(System.in);
 
-	@Override
+    /**
+     *
+     * @param command1
+     * @param dungeon
+     */
+    @Override
 	public void action(String command1, AbstractDungeon dungeon) {
 		if (dungeon.getCurrentRoom().getRoom().getClass().getSimpleName().toLowerCase().equals("monsterroom")) {
 			Player player = dungeon.getPlayer();

@@ -1,5 +1,9 @@
 package stuff;
 
+/**
+ *
+ * @author Antoine
+ */
 public class SharpeningPotion extends Stuff {
 
 	/**
@@ -11,23 +15,35 @@ public class SharpeningPotion extends Stuff {
 	 */
 	private String psname;
 	
-	
-	public SharpeningPotion(){
+    /**
+     *
+     */
+    public SharpeningPotion(){
 		this.sharpeningPoints = 1.2;
 		this.setPsname("Sharpening Potion");
 	}
 	
-	
-	
-	public String getPsname() {
+    /**
+     *
+     * @return
+     */
+    public String getPsname() {
 		return psname;
 	}
 
-	public void setPsname(String psname) {
+    /**
+     *
+     * @param psname
+     */
+    public void setPsname(String psname) {
 		this.psname = psname;
 	}
 
-	public double getSharpeningPoints() {
+    /**
+     *
+     * @return
+     */
+    public double getSharpeningPoints() {
 		return sharpeningPoints;
 	}
 

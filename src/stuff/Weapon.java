@@ -1,6 +1,9 @@
 package stuff;
 
-
+/**
+ *
+ * @author Antoine
+ */
 public abstract class Weapon extends Stuff  {
 	
 	//Attributes
@@ -14,20 +17,36 @@ public abstract class Weapon extends Stuff  {
 	protected int damageRange;
 	
 	// Methods - Getters and Setters
-	public int getBaseDamage(){
+
+    /**
+     *
+     * @return
+     */
+    	public int getBaseDamage(){
 		return this.baseDamage;
 	}
 	
-	public int getDamageRange(){
+    /**
+     *
+     * @return
+     */
+    public int getDamageRange(){
 		return this.damageRange;
 	}
 
-	
-	public void setBaseDamage(int baseDamage) {
+    /**
+     *
+     * @param baseDamage
+     */
+    public void setBaseDamage(int baseDamage) {
 		this.baseDamage = baseDamage;
 	}
 
-	public void setDamageRange(int damageRange) {
+    /**
+     *
+     * @param damageRange
+     */
+    public void setDamageRange(int damageRange) {
 		this.damageRange = damageRange;
 	}
 	

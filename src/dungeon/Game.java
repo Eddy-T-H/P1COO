@@ -6,7 +6,10 @@ import java.util.Scanner;
 
 import rooms.*;
 
-
+/**
+ *
+ * @author
+ */
 public class Game {
 	
 	
@@ -19,35 +22,63 @@ public class Game {
 	
 	
 	//Constructor
-	public Game(){
+
+    /**
+     *
+     */
+    	public Game(){
 		this.dungeons.add(new ConcreteDungeon());
 	}
 	
-	public Game(Player p){
+    /**
+     *
+     * @param p
+     */
+    public Game(Player p){
 		this.dungeons.add(new ConcreteDungeon(p));
 	}
 	
 	
 	//Methods
-	public void start(){
+
+    /**
+     *
+     */
+    	public void start(){
 		this.dungeons.get(currentDungeon);
 	}
 	
-	public void getUserEntry(String instruction){
+    /**
+     *
+     * @param instruction
+     */
+    public void getUserEntry(String instruction){
 		System.out.printf(instruction);
 		userEntry = scanEntry.nextLine();
 		this.interpretCommand();
 	}
 	
-	public AbstractDungeon getCurrentDungeon(){
+    /**
+     *
+     * @return
+     */
+    public AbstractDungeon getCurrentDungeon(){
 		return this.dungeons.get(this.currentDungeon);
 	}
 	
-	public Room getCurrentRoom(){
+    /**
+     *
+     * @return
+     */
+    public Room getCurrentRoom(){
 		return this.getCurrentDungeon().getCurrentRoom().getRoom();
 	}
 	
-	public boolean isStuckInMonsterRoom(){
+    /**
+     *
+     * @return
+     */
+    public boolean isStuckInMonsterRoom(){
 		if(this.getCurrentRoom().getRoom().getClass().getSimpleName().toLowerCase().equals("monsterroom")){
 			if(((MonsterRoom)this.getCurrentRoom()).getMonster().isAlive()){
 				return true;
@@ -56,11 +87,18 @@ public class Game {
 		return false;
 	}
 	
-	public Player getPlayer(){
+    /**
+     *
+     * @return
+     */
+    public Player getPlayer(){
 		return this.getCurrentDungeon().getPlayer();
 	}
 	
-	public void launchGame(){
+    /**
+     *
+     */
+    public void launchGame(){
         while(this.currentDungeon!=dungeons.size()){
         	 System.out.println("Welcome in the " + this.dungeons.get(currentDungeon).getClass().getSimpleName()  + "!\n"
      				+ "Enter \"help commands\" to get informations on game's commands. \n"
@@ -78,7 +116,10 @@ public class Game {
         System.out.println("EndGame");
 	}
 	
-	public void interpretCommand(){
+    /**
+     *
+     */
+    public void interpretCommand(){
 		String[] splittedCommand;
 		splittedCommand = userEntry.split(" ",2);
 		if(splittedCommand.length==2){
@@ -126,6 +167,7 @@ public class Game {
 	/**
 	 * Main function.
 	 * Used to launch the game and create a dungeon.
+     * @param args
 	 */
 	public static void main(String[] args){
 		game = new Game();

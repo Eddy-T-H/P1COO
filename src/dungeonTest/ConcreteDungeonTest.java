@@ -4,49 +4,80 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+/**
+ *
+ * @author
+ */
 public class ConcreteDungeonTest {
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testConcreteDungeon() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testGetCurrentRoom() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testSetCurrentRoom() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testGetPlayer() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testRemoveObject() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testInterpretCommand() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testIsFinished() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testGameFinished() {
 		fail("Not yet implemented"); // TODO
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testRoomHasHiddenExit() {
 		fail("Not yet implemented"); // TODO
 	}

@@ -4,28 +4,53 @@ import java.util.HashMap;
 import java.util.Map;
 import dungeon.AbstractDungeon;
 
+/**
+ *
+ * @author 
+ */
 public abstract class Room {
 	private String descriptionRoom="";
 	private String descriptionAround="";
 	private Map<String,Room> around = new HashMap<>();
 	
-	protected void setDescriptionRoom (String description){
+    /**
+     *
+     * @param description
+     */
+    protected void setDescriptionRoom (String description){
 		this.descriptionRoom=description;
 	}
 
-	public Room getRoom(){
+    /**
+     *
+     * @return
+     */
+    public Room getRoom(){
 		return this;
 	}
 	
-	public String getDescriptionRoom(){
+    /**
+     *
+     * @return
+     */
+    public String getDescriptionRoom(){
 		return this.descriptionRoom;
 	}
 	
-	public String getDescriptionAround(){
+    /**
+     *
+     * @return
+     */
+    public String getDescriptionAround(){
 		return this.descriptionAround;
 	}
 	
-	public void addNearRoom(String placementKey, Room room){
+    /**
+     *
+     * @param placementKey
+     * @param room
+     */
+    public void addNearRoom(String placementKey, Room room){
 		this.around.put(placementKey,room);
 		if(!(room.getNearRooms().containsValue(this))){
 			String place="";
@@ -49,11 +74,25 @@ public abstract class Room {
 		this.descriptionAround+= placementKey + ":" + room.getClass().getSimpleName() + " ";
 	}
 
-	public Map<String,Room> getNearRooms(){
+    /**
+     *
+     * @return
+     */
+    public Map<String,Room> getNearRooms(){
 		return this.around;
 	}
         
-	public void exit(AbstractDungeon dungeon, String command){}
+    /**
+     *
+     * @param dungeon
+     * @param command
+     */
+    public void exit(AbstractDungeon dungeon, String command){}
 	
-	abstract public void action(String command, AbstractDungeon dungeon);
+    /**
+     *
+     * @param command
+     * @param dungeon
+     */
+    abstract public void action(String command, AbstractDungeon dungeon);
 }

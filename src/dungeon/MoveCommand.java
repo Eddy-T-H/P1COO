@@ -1,8 +1,17 @@
 package dungeon;
 
+/**
+ *
+ * @author 
+ */
 public class MoveCommand implements InterfaceCommand{
 
-	@Override
+    /**
+     *
+     * @param command
+     * @param dungeon
+     */
+    @Override
 	public void action(String command, AbstractDungeon dungeon) {
 		switch(command.toLowerCase()){
 		case "west":

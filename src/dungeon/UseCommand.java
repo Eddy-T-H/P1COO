@@ -1,7 +1,17 @@
 package dungeon;
 
+/**
+ *
+ * @author
+ */
 public class UseCommand implements InterfaceCommand {
-	public void action(String command, AbstractDungeon dungeon) {
+
+    /**
+     *
+     * @param command
+     * @param dungeon
+     */
+    public void action(String command, AbstractDungeon dungeon) {
 		switch(command){
 			case "item":
 				dungeon.getPlayer().use();

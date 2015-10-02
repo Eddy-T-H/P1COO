@@ -1,11 +1,17 @@
 package monstres;
 
-
-
+/**
+ *
+ * @author
+ */
 public class Troll extends Monster{	
 	
 	// Troll Constructor
-	public Troll(){
+
+    /**
+     *
+     */
+    	public Troll(){
 		super.name="Troll";
 		super.healthPoint=60;
 		super.baseDamage =10;

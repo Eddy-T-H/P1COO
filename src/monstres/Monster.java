@@ -1,5 +1,9 @@
 package monstres;
 
+/**
+ *
+ * @author
+ */
 public abstract class Monster {
 	
 	// Attributes
@@ -20,28 +24,43 @@ public abstract class Monster {
      */
     protected String name ;
 	
-  
-    
-    
+    /**
+     *
+     * @return
+     */
     public int getHealthPoint() {
 		return healthPoint;
 	}
 
-	public int getBaseDamage() {
+    /**
+     *
+     * @return
+     */
+    public int getBaseDamage() {
 		return baseDamage;
 	}
 
-
-	public int getDamageRange() {
+    /**
+     *
+     * @return
+     */
+    public int getDamageRange() {
 		return damageRange;
 	}
 
-
-	public String getName() {
+    /**
+     *
+     * @return
+     */
+    public String getName() {
 		return name;
 	}
 
-	public void takeDamage(int dmg){
+    /**
+     *
+     * @param dmg
+     */
+    public void takeDamage(int dmg){
 		
 		this.healthPoint=this.healthPoint-dmg;
 		

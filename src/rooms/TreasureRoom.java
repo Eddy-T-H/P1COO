@@ -6,11 +6,20 @@ import java.util.List;
 import dungeon.AbstractDungeon;
 import stuff.Stuff;
 
+/**
+ *
+ * @author
+ */
 public class TreasureRoom extends Room {
 	
 	List<Stuff> chest = new ArrayList<>();
 	
-	public TreasureRoom(List<Stuff> theObjects, String description){
+    /**
+     *
+     * @param theObjects
+     * @param description
+     */
+    public TreasureRoom(List<Stuff> theObjects, String description){
 		
 		if(!(theObjects.isEmpty())){
 			String objectList = "";
@@ -25,7 +34,12 @@ public class TreasureRoom extends Room {
 		}
 	}
 	
-	@Override
+    /**
+     *
+     * @param command
+     * @param dungeon
+     */
+    @Override
 	public void action(String command, AbstractDungeon dungeon) {
 		boolean taken = false;
 		int objectToTake = 0;

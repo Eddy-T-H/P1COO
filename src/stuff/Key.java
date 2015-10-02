@@ -2,11 +2,19 @@ package stuff;
 
 import rooms.LockedExit;
 
+/**
+ *
+ * @author Antoine
+ */
 public class Key extends Stuff {
 
 
 	// Constructor
-	public Key(){
+
+    /**
+     *
+     */
+    	public Key(){
 	}
 
 	@Override

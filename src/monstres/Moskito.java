@@ -1,8 +1,15 @@
 package monstres;
 
+/**
+ *
+ * @author
+ */
 public class Moskito extends Monster {
 	
-	public Moskito(){
+    /**
+     *
+     */
+    public Moskito(){
 		super.name="Moskito";
 		super.healthPoint=5;
 		super.baseDamage =1;

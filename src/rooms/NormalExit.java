@@ -1,13 +1,26 @@
 package rooms;
 import dungeon.AbstractDungeon;
 
+/**
+ *
+ * @author
+ */
 public class NormalExit extends ExitDecorator{
 	
-	public NormalExit(Room room){
+    /**
+     *
+     * @param room
+     */
+    public NormalExit(Room room){
 		super.room = room;
 	}
 
-        @Override
+    /**
+     *
+     * @param dungeon
+     * @return
+     */
+    @Override
 	public boolean canExit(AbstractDungeon dungeon) {
 		return true;
 	}

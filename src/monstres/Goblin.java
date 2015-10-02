@@ -1,10 +1,17 @@
 package monstres;
 
-
+/**
+ *
+ * @author
+ */
 public class Goblin extends Monster{
 
 	// Goblin constructor
-	public Goblin(){
+
+    /**
+     *
+     */
+    	public Goblin(){
 		super.name="Goblin";
 		super.healthPoint=30;
 		super.baseDamage=5;

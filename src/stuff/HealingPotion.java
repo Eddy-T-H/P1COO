@@ -2,6 +2,10 @@ package stuff;
 
 import dungeon.Player;
 
+/**
+ *
+ * @author Antoine
+ */
 public abstract class HealingPotion extends Stuff{
 
 	// Attribute

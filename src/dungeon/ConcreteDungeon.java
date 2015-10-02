@@ -6,9 +6,16 @@ import monstres.*;
 import stuff.*;
 import rooms.*;
 
-
+/**
+ *
+ * @author
+ */
 public class ConcreteDungeon extends AbstractDungeon {
-	public ConcreteDungeon(){
+
+    /**
+     *
+     */
+    public ConcreteDungeon(){
 		Room room;
 		List<Stuff> objects = new ArrayList<>();
         this.player = new Player();
@@ -29,7 +36,12 @@ public class ConcreteDungeon extends AbstractDungeon {
 	
 	
 	// For level2+
-	public ConcreteDungeon(Player p){
+
+    /**
+     *
+     * @param p
+     */
+    	public ConcreteDungeon(Player p){
 		Room room;
 		List<Stuff> objects = new ArrayList<>();
         this.player = p;

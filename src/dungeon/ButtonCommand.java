@@ -1,9 +1,17 @@
 package dungeon;
 
-
+/**
+ *
+ * @author
+ */
 public class ButtonCommand implements InterfaceCommand {
 
-	@Override
+    /**
+     *
+     * @param command
+     * @param dungeon
+     */
+    @Override
 	public void action(String command, AbstractDungeon dungeon) {
 		dungeon.currentRoom.action(command, dungeon);
 	}

@@ -10,54 +10,114 @@ import stuff.SharpeningPotion;
 import stuff.Stuff;
 import stuff.Weapon;
 
+/**
+ *
+ * @author
+ */
 public class Player {
 	
 	//Attributes
-	protected int maxHealth =100;
-	protected int healthpoint = maxHealth;
-	public List<Stuff> inventory = new ArrayList<>();
-	public Weapon equipedWeapon ;
+
+    /**
+     *
+     */
+    	protected int maxHealth =100;
+
+    /**
+     *
+     */
+    protected int healthpoint = maxHealth;
+
+    /**
+     *
+     */
+    public List<Stuff> inventory = new ArrayList<>();
+
+    /**
+     *
+     */
+    public Weapon equipedWeapon ;
 	
 	// Builder
 	
+    /**
+     *
+     */
+    	
 	public Player(){
 		this.setEquipedWeapon(new Fists());
 	}
 	
 	//Methods
-	public int getMaxHealth() {
+
+    /**
+     *
+     * @return
+     */
+    	public int getMaxHealth() {
 		return maxHealth;
 	}
 
-	public void setMaxHealth(int maxHealth) {
+    /**
+     *
+     * @param maxHealth
+     */
+    public void setMaxHealth(int maxHealth) {
 		this.maxHealth = maxHealth;
 	}
 
-	public int getHealthpoint() {
+    /**
+     *
+     * @return
+     */
+    public int getHealthpoint() {
 		return healthpoint;
 	}
 
-	public void setHealthpoint(int healthpoint) {
+    /**
+     *
+     * @param healthpoint
+     */
+    public void setHealthpoint(int healthpoint) {
 		this.healthpoint = healthpoint;
 	}
 
-	public Weapon getEquipedWeapon() {
+    /**
+     *
+     * @return
+     */
+    public Weapon getEquipedWeapon() {
 		return equipedWeapon;
 	}
 
-	public void setEquipedWeapon(Weapon equipedWeapon) {
+    /**
+     *
+     * @param equipedWeapon
+     */
+    public void setEquipedWeapon(Weapon equipedWeapon) {
 		this.equipedWeapon = equipedWeapon;
 	}
 
-	public List<Stuff> getInventory (){
+    /**
+     *
+     * @return
+     */
+    public List<Stuff> getInventory (){
 		return this.inventory;
 	}
         
-	public void addObject(Stuff object){
+    /**
+     *
+     * @param object
+     */
+    public void addObject(Stuff object){
 	    this.getInventory().add(object);
 	}
 
-	public void printInventory(){
+    /**
+     *
+     */
+    public void printInventory(){
 		for(Stuff f:inventory){
 			if(f != null){
 				System.out.println(f.toString() + "\n");
@@ -65,7 +125,12 @@ public class Player {
 		}
 	}
 	
-	public boolean haveObject(String nameObject) {
+    /**
+     *
+     * @param nameObject
+     * @return
+     */
+    public boolean haveObject(String nameObject) {
 		if (!(inventory.isEmpty())) {
 			for (Stuff object : inventory) {
 				if ((object.getClass().getSimpleName().toLowerCase()).equals(nameObject)) {
@@ -78,7 +143,12 @@ public class Player {
 		}
 	}
 
-	public Stuff getItemFromInventoryFromString(String nameObject) {
+    /**
+     *
+     * @param nameObject
+     * @return
+     */
+    public Stuff getItemFromInventoryFromString(String nameObject) {
 		if (!(inventory.isEmpty())) {
 			for (Stuff object : inventory) {
 				if ((object.getClass().getSimpleName().toLowerCase()).equals(nameObject)) {
@@ -91,12 +161,20 @@ public class Player {
 		}
 	}
 	
-	public int damagePlayer(){
+    /**
+     *
+     * @return
+     */
+    public int damagePlayer(){
 		return this.getEquipedWeapon().getBaseDamage()+
 				(int)(Math.random()*(double)this.getEquipedWeapon().getDamageRange()); 
 	}
 	
-	public void takeDamage(int dmg){
+    /**
+     *
+     * @param dmg
+     */
+    public void takeDamage(int dmg){
 		if(this.getHealthpoint() - dmg > 0){
 			this.setHealthpoint(this.getHealthpoint() - dmg);
 		}else{
@@ -104,7 +182,11 @@ public class Player {
 		}
 	}
 	
-	public void useHealingPotion(HealingPotion p){
+    /**
+     *
+     * @param p
+     */
+    public void useHealingPotion(HealingPotion p){
 		if(this.getHealthpoint() + p.getHealingPoints() <= this.getMaxHealth()){
 			this.setHealthpoint(this.getMaxHealth() + p.getHealingPoints());
 		}else{
@@ -122,7 +204,11 @@ public class Player {
 		sp.effectOnWeapon(w);
 	}
 	
-	public boolean isDead(){
+    /**
+     *
+     * @return
+     */
+    public boolean isDead(){
 		if(this.getHealthpoint() <= 0){
 			return true;
 		}else{
@@ -130,7 +216,11 @@ public class Player {
 		}
 	}
 	
-	public void equipWeapon(Weapon newWeapon ){
+    /**
+     *
+     * @param newWeapon
+     */
+    public void equipWeapon(Weapon newWeapon ){
 		if(!(this.getEquipedWeapon() instanceof Fists))
 		{	
 			addObject(this.getEquipedWeapon());	
@@ -138,7 +228,11 @@ public class Player {
 		this.setEquipedWeapon(newWeapon);
 	}
 	
-	public boolean emptyInventory(){
+    /**
+     *
+     * @return
+     */
+    public boolean emptyInventory(){
 		for(Stuff f:inventory){
 			if(f != null){
 				return false;
@@ -147,7 +241,11 @@ public class Player {
 		return true;
 	}
 	
-	public void useItem(Stuff item){
+    /**
+     *
+     * @param item
+     */
+    public void useItem(Stuff item){
 		if (item instanceof Weapon){
 			this.equipWeapon((Weapon)item);
 		}else if(item instanceof HealingPotion){
@@ -155,7 +253,10 @@ public class Player {
 		}		
 	}
 	
-	public void use(){
+    /**
+     *
+     */
+    public void use(){
 		if (this.emptyInventory()) {
 			System.out.println("You have no item !\n");
 			

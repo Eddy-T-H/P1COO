@@ -10,6 +10,10 @@ import monstres.Troll;
 
 import org.junit.Test;
 
+/**
+ *
+ * @author
+ */
 public class TrollTest extends TestCase {
     
         private Monster monster;
@@ -26,40 +30,61 @@ public class TrollTest extends TestCase {
         monster = null;
     }
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testGetHealthPoint() {
             assertEquals(monster.getHealthPoint(),60);
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testGetBaseDamage() {
             assertEquals(monster.getBaseDamage(),10);
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testGetDamageRange() {
             assertEquals(monster.getDamageRange(),10);
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testGetName() {
             assertEquals(monster.getDamageRange(),"Troll");
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testTakeDamage() {
             monster.takeDamage(20);
             assertEquals(monster.getHealthPoint(),40);
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testIsAlive() {
             assertTrue(monster.isAlive());
             monster.takeDamage(61);
             assertFalse(monster.isAlive());
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testDamageMonster() {
 		fail("Not yet implemented"); // TODO
 	}
