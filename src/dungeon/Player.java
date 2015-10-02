@@ -3,6 +3,8 @@ package dungeon;
 import java.util.ArrayList;
 import java.util.List;
 
+import stuff.HealingPotion;
+import stuff.SharpeningPotion;
 import stuff.Stuff;
 import stuff.Weapon;
 
@@ -45,9 +47,17 @@ public class Player {
 	}
         
 	public void addObject(Stuff object){
-	    this.inventory.add(object);
+	    this.getInventory().add(object);
 	}
 
+	public void printInventory(){
+		for(Stuff f:inventory){
+			if(f != null){
+				System.out.println(f.toString() + "\n");
+			}
+		}
+	}
+	
 	public boolean haveObject(String nameObject) {
 		if (!(inventory.isEmpty())) {
 			for (Stuff object : inventory) {
@@ -62,15 +72,40 @@ public class Player {
 	}
 
 	public int damagePlayer(){
-		return this.equipedWeapon.getBaseDamage()+
-				(int)(Math.random()*(double)this.equipedWeapon.getDamageRange()); 
+		return this.getEquipedWeapon().getBaseDamage()+
+				(int)(Math.random()*(double)this.getEquipedWeapon().getDamageRange()); 
 	}
 	
-	public void heal(int points){
-		if(this.getHealthpoint() + points <= this.getMaxHealth()){
-			this.setHealthpoint(this.getMaxHealth() + points);
+	public void takeDamage(int dmg){
+		if(this.getHealthpoint() - dmg > 0){
+			this.setHealthpoint(this.getHealthpoint() - dmg);
+		}else{
+			this.setHealthpoint(0);
+		}
+	}
+	
+	public void useHealingPotion(HealingPotion p){
+		if(this.getHealthpoint() + p.getHealingPoints() <= this.getMaxHealth()){
+			this.setHealthpoint(this.getMaxHealth() + p.getHealingPoints());
 		}else{
 			this.setHealthpoint(this.getMaxHealth());
+		}
+	}
+	
+	/**
+	 * Use the sharpening potion on a weapon and improve its abilities by 20%
+	 * @param sp sharpeningpotion used
+	 * @param w weapon improved
+	 */
+	public void useSharpeningPotion(SharpeningPotion sp, Weapon w){
+		sp.effectOnWeapon(w);
+	}
+	
+	public boolean isDead(){
+		if(this.getHealthpoint() <= 0){
+			return true;
+		}else{
+			return false;
 		}
 	}
 	

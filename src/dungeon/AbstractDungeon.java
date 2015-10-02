@@ -26,8 +26,8 @@ public abstract class AbstractDungeon {
 	public void removeObject(Stuff object){
 		this.player.getInventory().remove(object);
 	}
-	
-	public void interpretCommand(String command) {
+
+public void interpretCommand(String command) {
 		this.currentRoom.action(command, this);
 	}
 	

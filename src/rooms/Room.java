@@ -13,6 +13,9 @@ public abstract class Room {
 		this.descriptionRoom=description;
 	}
 
+	public Room getRoom(){
+		return this;
+	}
 	
 	public String getDescriptionRoom(){
 		return this.descriptionRoom;
@@ -50,7 +53,7 @@ public abstract class Room {
 		return this.around;
 	}
         
-        public void exit(AbstractDungeon dungeon, String command){}
+	public void exit(AbstractDungeon dungeon, String command){}
 	
 	abstract public void action(String command, AbstractDungeon dungeon);
 }

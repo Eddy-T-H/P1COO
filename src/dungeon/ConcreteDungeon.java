@@ -2,16 +2,10 @@ package dungeon ;
 import java.util.ArrayList;
 import java.util.List;
 
-
-import rooms.NormalExit;
-import rooms.TreasureRoom;
+import monstres.*;
 import stuff.*;
-import rooms.LockedExit;
-import rooms.NormalRoom;
-import rooms.Room;
-import rooms.ButtonRoom;
-import rooms.EndRoom;
-import rooms.HiddenExit;
+import rooms.*;
+
 
 public class ConcreteDungeon extends AbstractDungeon {
 	public ConcreteDungeon(){
@@ -29,6 +23,6 @@ public class ConcreteDungeon extends AbstractDungeon {
 		room=room.getNearRooms().get("North");
 		room.addNearRoom("North", new HiddenExit (new NormalRoom("This is a normal room")));
 		room=room.getNearRooms().get("North");
-		room.addNearRoom("North", new HiddenExit (new EndRoom("This is the end room")));
+		room.addNearRoom("North", new HiddenExit (new MonsterRoom(new Moskito(),"This is a normal room")));
 	}
 }
