@@ -13,7 +13,27 @@ public class TrapRoom extends Room {
 	int trap_damage;
 
 	
-    /**
+    public boolean isTrapactivated() {
+		return trapactivated;
+	}
+
+
+
+	public void setTrapactivated(boolean trapactivated) {
+		this.trapactivated = trapactivated;
+	}
+
+
+
+	public int getTrap_damage() {
+		return trap_damage;
+	}
+
+    public boolean isATrapRoom(){
+    	return true;
+    }
+
+	/**
      * Builder
      * @param description
      */
@@ -34,10 +54,6 @@ public class TrapRoom extends Room {
 	public void action(String command, AbstractDungeon dungeon) {
 
 		
-		if(trapactivated){
-			System.out.println("You fall in a trap ! \n You lost " + this.trap_damage + " HP");
-			dungeon.getPlayer().takeDamage(this.trap_damage);
-			trapactivated = false;
-		}
+
 	}
 }

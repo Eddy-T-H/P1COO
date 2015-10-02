@@ -53,6 +53,17 @@ public abstract class Exit extends Room {
 						System.out.println("Won !");
 						dungeon.gameFinished();
 					}
+					
+					if(roomRow.getValue().getRoom().isATrapRoom()){
+						TrapRoom troom = (TrapRoom)roomRow.getValue().getRoom();
+						if(troom.isTrapactivated()){
+							System.out.println("You fall in a trap ! \n You lost " + troom.getTrap_damage() + " HP");
+							dungeon.getPlayer().takeDamage(troom.getTrap_damage());
+							troom.setTrapactivated(false);
+						}
+					}
+
+					
 					System.out.println("You change of room");
 					success = true;
 				}

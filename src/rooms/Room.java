@@ -105,4 +105,13 @@ public abstract class Room {
     	return false;
     }
     
+    /**
+     * Test if the room is a trap room
+     * @return true or false
+     */
+    public boolean isATrapRoom(){
+    	return false;
+    }
+    
+    
 }
