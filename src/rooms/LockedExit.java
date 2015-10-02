@@ -2,6 +2,7 @@ package rooms;
 
 import dungeon.AbstractDungeon;
 import stuff.Key;
+
 public class LockedExit extends ExitDecorator{
     
 	boolean locked;

@@ -42,6 +42,7 @@ public class Game {
 			}
 			currentDungeon++;
         }
+        System.out.println("EndGame");
 	}
 	
 	public void interpretCommand(){

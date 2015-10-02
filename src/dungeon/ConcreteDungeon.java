@@ -10,6 +10,7 @@ import rooms.LockedExit;
 import rooms.NormalRoom;
 import rooms.Room;
 import rooms.ButtonRoom;
+import rooms.EndRoom;
 import rooms.HiddenExit;
 
 public class ConcreteDungeon extends AbstractDungeon {
@@ -24,8 +25,10 @@ public class ConcreteDungeon extends AbstractDungeon {
 		this.currentRoom.addNearRoom("East", new NormalExit (new NormalRoom("This is a normal room")));
 		this.currentRoom.addNearRoom("North", new HiddenExit (new NormalRoom("This is a normal room")));
 		room=this.currentRoom.getNearRooms().get("West");
-		room.addNearRoom("North", new NormalExit (new ButtonRoom("This is a normal room")));
+		room.addNearRoom("North", new NormalExit (new ButtonRoom("This is a button room")));
 		room=room.getNearRooms().get("North");
 		room.addNearRoom("North", new HiddenExit (new NormalRoom("This is a normal room")));
+		room=room.getNearRooms().get("North");
+		room.addNearRoom("North", new HiddenExit (new EndRoom("This is the end room")));
 	}
 }
