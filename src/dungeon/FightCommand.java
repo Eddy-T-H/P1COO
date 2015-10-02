@@ -28,15 +28,13 @@ public class FightCommand implements InterfaceCommand {
 				player.takeDamage(dmg);
 
 				System.out.println("You have " + player.getHealthpoint() + "HP left");
-
+				if(!(monster.isAlive())){
+					System.out.println("the"+monster.getName()+" is dead");
+				}
 				break;
 			case "use":
-				
 				player.use();
-				
-
-
-				break;
+        		break;
 
 			default:
 				System.out.println("Entity unrecognized");
