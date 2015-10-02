@@ -2,7 +2,7 @@ package stuff;
 
 /**
  *
- * @author Antoine
+ * @author
  */
 public abstract class Weapon extends Stuff  {
 	

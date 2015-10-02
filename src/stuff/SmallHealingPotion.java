@@ -2,7 +2,7 @@ package stuff;
 
 /**
  *
- * @author Antoine
+ * @author
  */
 public class SmallHealingPotion extends HealingPotion{
 

@@ -1,10 +1,8 @@
 package stuff;
 
-import rooms.LockedExit;
-
 /**
  *
- * @author Antoine
+ * @author
  */
 public class Key extends Stuff {
 

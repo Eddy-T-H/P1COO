@@ -2,7 +2,7 @@ package stuff;
 
 /**
  *
- * @author Antoine
+ * @author
  */
 public class GreatHammer extends Weapon {
 

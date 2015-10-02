@@ -4,7 +4,7 @@ import dungeon.Player;
 
 /**
  *
- * @author Antoine
+ * @author
  */
 public abstract class HealingPotion extends Stuff{
 

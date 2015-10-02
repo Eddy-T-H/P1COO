@@ -2,7 +2,7 @@ package stuff;
 
 /**
  *
- * @author Antoine
+ * @author
  */
 public abstract class Stuff {
 	private String itemName;
