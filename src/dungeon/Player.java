@@ -140,7 +140,7 @@ public class Player {
 	public boolean emptyInventory(){
 		for(Stuff f:inventory){
 			if(f != null){
-				return true;
+				return false;
 			}
 		}
 		return true;

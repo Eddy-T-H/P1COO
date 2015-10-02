@@ -27,7 +27,9 @@ public class FightCommand implements InterfaceCommand {
 				player.takeDamage(dmg);
 
 				System.out.println("You have " + player.getHealthpoint() + "HP left");
-
+				if(!(monster.isAlive())){
+					System.out.println("the"+monster.getName()+" is dead");
+				}
 				break;
 			case "use":
 				if(player.emptyInventory()){
@@ -45,10 +47,9 @@ public class FightCommand implements InterfaceCommand {
 				}
 				item = player.getItemFromInventoryFromString(command1);
 				player.useItem(item);
+				System.out.println("you used "+item.getItemName());
 			
 				break;
-			case "flee":
-				
 				
 			default:
 				System.out.println("Entity unrecognized");
