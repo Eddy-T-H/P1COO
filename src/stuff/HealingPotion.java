@@ -8,8 +8,17 @@ public abstract class HealingPotion extends Stuff{
 	/**
 	 * Amount of HP restored by the potion
 	 */
-	private int healingPoints;
+	protected int healingPoints;
+	/**
+	 * Potion name
+	 */
+	protected String pname;
 	
+	
+	public String getPname() {
+		return pname;
+	}
+
 	/**
 	 * Setter for healingPoints
 	 * @param healingPoints new HealingPoints
@@ -25,13 +34,13 @@ public abstract class HealingPotion extends Stuff{
 	public int getHealingPoints() {
 		return healingPoints;
 	}
+	
+	public String toString(){
+		return this.getPname();
+	}
 
-	/**
-	 * Use of healing potion on a player
-	 * @param p Player healed
-	 */
-	public void useHealingPotion(Player p){
-		p.heal(this.getHealingPoints());
+	public void setPname(String pname) {
+		this.pname = pname;
 	}
 	
 }

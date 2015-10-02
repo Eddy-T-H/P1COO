@@ -3,6 +3,8 @@ package dungeon;
 import java.util.ArrayList;
 import java.util.List;
 
+import stuff.HealingPotion;
+import stuff.SharpeningPotion;
 import stuff.Stuff;
 import stuff.Weapon;
 
@@ -48,6 +50,14 @@ public class Player {
 	    this.getInventory().add(object);
 	}
 
+	public void printInventory(){
+		for(Stuff f:inventory){
+			if(f != null){
+				System.out.println(f.toString() + "\n");
+			}
+		}
+	}
+	
 	public boolean haveObject(String nameObject) {
 		if (!(inventory.isEmpty())) {
 			for (Stuff object : inventory) {
@@ -74,12 +84,21 @@ public class Player {
 		}
 	}
 	
-	public void heal(int points){
-		if(this.getHealthpoint() + points <= this.getMaxHealth()){
-			this.setHealthpoint(this.getMaxHealth() + points);
+	public void useHealingPotion(HealingPotion p){
+		if(this.getHealthpoint() + p.getHealingPoints() <= this.getMaxHealth()){
+			this.setHealthpoint(this.getMaxHealth() + p.getHealingPoints());
 		}else{
 			this.setHealthpoint(this.getMaxHealth());
 		}
+	}
+	
+	/**
+	 * Use the sharpening potion on a weapon and improve its abilities by 20%
+	 * @param sp sharpeningpotion used
+	 * @param w weapon improved
+	 */
+	public void useSharpeningPotion(SharpeningPotion sp, Weapon w){
+		sp.effectOnWeapon(w);
 	}
 	
 	public boolean isDead(){

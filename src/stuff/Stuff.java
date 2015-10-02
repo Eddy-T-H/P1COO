@@ -6,4 +6,7 @@ public abstract class Stuff {
 	public String getItemName(){
 		return this.itemName;
 	}
+	
+	public abstract String toString();
+	
 }

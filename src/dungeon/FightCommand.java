@@ -10,7 +10,7 @@ public class FightCommand implements InterfaceCommand {
 		if (dungeon.getCurrentRoom().getRoom().getClass().getSimpleName().toLowerCase().equals("monsterroom")){
 			switch(command){
 			case "attack":
-				Monster monster = ((MonsterRoom)dungeon.getCurrentRoom()).getMonster();
+				Monster monster = ((MonsterRoom)dungeon.getCurrentRoom().getRoom()).getMonster();
 				Player player = dungeon.getPlayer();
 				int dmg = dungeon.getPlayer().damagePlayer();
 				
