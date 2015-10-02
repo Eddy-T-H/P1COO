@@ -10,7 +10,7 @@ import dungeon.AbstractDungeon;
  * Uses the decorated pattern to link rooms through exits
  * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
-public abstract class ExitDecorator extends Room {
+public abstract class Exit extends Room {
 
     /**
      * Attribute room

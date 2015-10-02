@@ -5,7 +5,7 @@ import dungeon.AbstractDungeon;
  *
  * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
-public class NormalExit extends ExitDecorator{
+public class NormalExit extends Exit{
 	
     /**
      * Builder

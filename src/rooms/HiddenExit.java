@@ -6,7 +6,7 @@ import dungeon.AbstractDungeon;
  * 
  * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
-public class HiddenExit extends ExitDecorator{
+public class HiddenExit extends Exit{
     private boolean isHidden;
     
     /**

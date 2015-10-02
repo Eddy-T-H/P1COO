@@ -1,24 +1,36 @@
 package stuffTest;
 
+import junit.framework.TestCase;
+import monstres.Moskito;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import stuff.HealingPotion;
+import stuff.MediumHealingPotion;
 
-public class HealingPotionTest {
+public class HealingPotionTest extends TestCase{
+    protected HealingPotion pot;
+    
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+        pot = new MediumHealingPotion();
+    }
 
-	@Test
-	public void testSetHealingPoints() {
-		fail("Not yet implemented"); // TODO
-	}
+    @Override
+    protected void tearDown() throws Exception {
+        super.tearDown();
+        pot = null;
+    }
 
 	@Test
 	public void testGetHealingPoints() {
-		fail("Not yet implemented"); // TODO
+		assertEquals(pot.getHealingPoints(),20);
 	}
 
 	@Test
 	public void testToString() {
-		fail("Not yet implemented"); // TODO
+		assertEquals(pot.toString(),"Medium Healing Potion");
 	}
 
 }
