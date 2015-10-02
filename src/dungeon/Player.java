@@ -2,6 +2,7 @@ package dungeon;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import stuff.Fists;
 import stuff.HealingPotion;
@@ -152,6 +153,26 @@ public class Player {
 		}else if(item instanceof HealingPotion){
 			this.useHealingPotion((HealingPotion)item);
 		}		
+	}
+	
+	public void use(){
+		if (this.emptyInventory()) {
+			System.out.println("You have no item !\n");
+			
+		}else{
+			this.printInventory();
+			System.out.println("which item do you to use?");
+			@SuppressWarnings("resource")
+			String command1 = (new Scanner(System.in)).nextLine();
+			Stuff item = this.getItemFromInventoryFromString(command1);
+
+			if (item == null) {
+				System.out.println("you don't have this item");
+			}else{
+				item = this.getItemFromInventoryFromString(command1);
+				this.useItem(item);
+			}
+		}
 	}
 	
 }
