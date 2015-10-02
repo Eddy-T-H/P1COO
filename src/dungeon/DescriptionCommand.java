@@ -19,13 +19,14 @@ public class DescriptionCommand implements InterfaceCommand {
 				System.out.println(dungeon.getCurrentRoom().getDescriptionRoom());
 				if (dungeon.roomHasHiddenExit()){
 					System.out.println("You found a strange print.");
-				}
-				if(dungeon.getCurrentRoom().getRoom().getClass().getSimpleName().equals("ButtonRoom")){
+                                        if(dungeon.getCurrentRoom().getRoom().getClass().getSimpleName().equals("ButtonRoom")){
 					System.out.println("You saw a strange button!");
+                                        }
+                                        else{
+                                                System.out.println("You touched the print and found a new exit!");
+                                        }
 				}
-				else{
-					System.out.println("You touched the print and found a new exit!");
-				}
+				
 				break;
 			case "description around":
 				System.out.println(dungeon.getCurrentRoom().getDescriptionAround());
