@@ -3,6 +3,7 @@ package dungeon;
 import java.util.ArrayList;
 import java.util.List;
 
+import stuff.Fists;
 import stuff.HealingPotion;
 import stuff.SharpeningPotion;
 import stuff.Stuff;
