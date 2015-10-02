@@ -12,7 +12,7 @@ public class ButtonRoom extends Room {
 	
 	public void action(String command, AbstractDungeon dungeon) {
 		if(seeButton){
-			System.out.println("");
+			System.out.println("You pushed the button and discovered a new door!");
 			this.pushedButton=true;
 		}
 	}
