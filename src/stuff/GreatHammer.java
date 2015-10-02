@@ -6,7 +6,7 @@ public class GreatHammer extends Weapon {
 	public GreatHammer(){
 		this.baseDamage = 25;
 		this.damageRange = 10;
-		this.wname = "Great Hammer";
+		this.setItemName("GreatHammer");
 	}
 	
 

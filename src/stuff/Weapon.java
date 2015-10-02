@@ -4,10 +4,6 @@ package stuff;
 public abstract class Weapon extends Stuff  {
 	
 	//Attributes
-	/** 
-	 * Weapon name
-	 */
-	protected String wname;
 	/**
 	 * Base damage of the weapon
 	 */
@@ -26,9 +22,6 @@ public abstract class Weapon extends Stuff  {
 		return this.damageRange;
 	}
 
-	public String getWeaponName(){
-		return this.wname;
-	}
 	
 	public void setBaseDamage(int baseDamage) {
 		this.baseDamage = baseDamage;
@@ -39,7 +32,7 @@ public abstract class Weapon extends Stuff  {
 	}
 	
 	public String toString(){
-		return  this.getWeaponName() + ". \n"
+		return  this.getItemName() + ". \n"
 				+ "Base damage : " + this.getBaseDamage() + ".\n"
 						+ "Damage range : " + this.getDamageRange() + ".\n";
 	}

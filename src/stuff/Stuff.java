@@ -8,5 +8,9 @@ public abstract class Stuff {
 	}
 	
 	public abstract String toString();
+
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
+	}
 	
 }
