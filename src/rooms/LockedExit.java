@@ -7,7 +7,7 @@ import stuff.Key;
  *
  * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
-public class LockedExit extends ExitDecorator{
+public class LockedExit extends Exit{
     
 	boolean locked;
 	

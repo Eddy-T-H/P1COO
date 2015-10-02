@@ -10,7 +10,7 @@ import dungeon.AbstractDungeon;
  * Uses the decorated pattern to link rooms through exits
  * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
-public abstract class ExitDecorator extends Room {
+public abstract class Exit extends Room {
 
     /**
      * Attribute room
@@ -44,7 +44,7 @@ public abstract class ExitDecorator extends Room {
                         boolean success=false;
                         for (Map.Entry<String, Room> roomRow : dungeon.getCurrentRoom().getNearRooms().entrySet()){
                             if(roomRow.getKey().toLowerCase().equals(command.toLowerCase())){
-                                    if(((ExitDecorator)roomRow.getValue()).canExit(dungeon)){
+                                    if(((Exit)roomRow.getValue()).canExit(dungeon)){
                                     dungeon.setCurrentRoom(roomRow.getValue());
                                     System.out.println("You change of room");
                                     success = true;

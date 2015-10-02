@@ -1,6 +1,8 @@
 package dungeonTest;
 
-import static org.junit.Assert.*;
+import dungeon.AbstractDungeon;
+import dungeon.ConcreteDungeon;
+import junit.framework.TestCase;
 
 import org.junit.Test;
 
@@ -8,7 +10,20 @@ import org.junit.Test;
  *
  * @author
  */
-public class GameTest {
+public class GameTest extends TestCase{
+    protected AbstractDungeon dun;
+    
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+        dun = new ConcreteDungeon();
+    }
+
+    @Override
+    protected void tearDown() throws Exception {
+        super.tearDown();
+        dun = null;
+    }
 
     /**
      *
@@ -47,22 +62,6 @@ public class GameTest {
      */
     @Test
 	public void testGetPlayer() {
-		fail("Not yet implemented"); // TODO
-	}
-
-    /**
-     *
-     */
-    @Test
-	public void testLaunchGame() {
-		fail("Not yet implemented"); // TODO
-	}
-
-    /**
-     *
-     */
-    @Test
-	public void testInterpretCommand() {
 		fail("Not yet implemented"); // TODO
 	}
 }

@@ -5,7 +5,7 @@ import dungeon.AbstractDungeon;
  *
  * @author
  */
-public class NormalExit extends ExitDecorator{
+public class NormalExit extends Exit{
 	
     /**
      *
