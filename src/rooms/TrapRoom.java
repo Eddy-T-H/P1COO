@@ -9,9 +9,22 @@ import stuff.Stuff;
  * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class TrapRoom extends Room {
-	boolean trapactivated = false;
-	int trap_damage = 25;
+	boolean trapactivated;
+	int trap_damage;
 
+	
+    /**
+     * Builder
+     * @param description
+     */
+    public TrapRoom(String description){
+		super.setDescriptionRoom(description);
+		this.trap_damage = 25;
+		this.trapactivated = true;
+	}
+    
+   
+    
 	/**
      * Proceed with the user entry
      * @param command user entry
