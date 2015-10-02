@@ -34,27 +34,34 @@ public abstract class Exit extends Room {
         return this.room.getDescriptionRoom();
     }
                 
-    /**
-     * Method exit used to leave a room
-     * @param dungeon current dungeon
-     * @param command user command
-     */
-    @Override
-                public void exit(AbstractDungeon dungeon, String command){
-                        boolean success=false;
-                        for (Map.Entry<String, Room> roomRow : dungeon.getCurrentRoom().getNearRooms().entrySet()){
-                            if(roomRow.getKey().toLowerCase().equals(command.toLowerCase())){
-                                    if(((Exit)roomRow.getValue()).canExit(dungeon)){
-                                    dungeon.setCurrentRoom(roomRow.getValue());
-                                    System.out.println("You change of room");
-                                    success = true;
-                                    }
-                            }
-                        }
-                        if(!success){
-                            System.out.println("You can't move that way");
-                        }
-            }
+	/**
+	 * Method exit used to leave a room
+	 * 
+	 * @param dungeon
+	 *            current dungeon
+	 * @param command
+	 *            user command
+	 */
+	@Override
+	public void exit(AbstractDungeon dungeon, String command) {
+		boolean success = false;
+		for (Map.Entry<String, Room> roomRow : dungeon.getCurrentRoom().getNearRooms().entrySet()) {
+			if (roomRow.getKey().toLowerCase().equals(command.toLowerCase())) {
+				if (((Exit) roomRow.getValue()).canExit(dungeon)) {
+					dungeon.setCurrentRoom(roomRow.getValue());
+					if (roomRow.getValue().getRoom().isAnEndRoom()) {
+						System.out.println("Won !");
+						dungeon.gameFinished();
+					}
+					System.out.println("You change of room");
+					success = true;
+				}
+			}
+		}
+		if (!success) {
+			System.out.println("You can't move that way");
+		}
+	}
                     
     /**
      *	Test if room can be leaved

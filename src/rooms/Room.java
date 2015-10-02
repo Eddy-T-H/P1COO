@@ -95,4 +95,14 @@ public abstract class Room {
      * @param dungeon current dungeon
      */
     abstract public void action(String command, AbstractDungeon dungeon);
+    
+    
+    /**
+     * Test if the room is an end room
+     * @return true or false
+     */
+    public boolean isAnEndRoom(){
+    	return false;
+    }
+    
 }
