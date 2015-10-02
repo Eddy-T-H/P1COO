@@ -25,7 +25,7 @@ public class HealingPotionTest extends TestCase{
 
 	@Test
 	public void testGetHealingPoints() {
-		assertEquals(pot.getHealingPoints(),20);
+		assertEquals(pot.getHealingPoints(),10);
 	}
 
 	@Test

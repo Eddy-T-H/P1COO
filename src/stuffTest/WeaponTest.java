@@ -50,7 +50,7 @@ public class WeaponTest extends TestCase{
 
 	@Test
 	public void testToString() {
-		assertEquals(weapon.toString(),"Short Sword");
+		assertEquals(weapon.toString(),"Short Sword.\nBase damage : 10.\nDamage range : 5.\n");
 	}
 
 }

@@ -52,7 +52,7 @@ public abstract class Weapon extends Stuff  {
 	
         @Override
 	public String toString(){
-		return  this.getItemName() + ". \n"
+		return  this.getItemName() + ".\n"
 				+ "Base damage : " + this.getBaseDamage() + ".\n"
 						+ "Damage range : " + this.getDamageRange() + ".\n";
 	}

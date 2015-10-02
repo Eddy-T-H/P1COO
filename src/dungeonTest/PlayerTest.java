@@ -102,17 +102,6 @@ public class PlayerTest extends TestCase{
                 player.getInventory();
 	}
 
-
-    /**
-     *
-     */
-    @Test
-	public void testPrintInventory() {
-		Stuff weapon = new ShortSword();
-                player.addObject(weapon);
-                player.printInventory();
-	}
-
     /**
      *
      */
@@ -120,7 +109,7 @@ public class PlayerTest extends TestCase{
 	public void testHaveObject() {
 		Stuff weapon = new ShortSword();
                 player.addObject(weapon);
-                assertTrue(player.haveObject("ShortSword"));
+                assertTrue(player.haveObject("shortsword"));
 	}
 
     /**
@@ -148,15 +137,7 @@ public class PlayerTest extends TestCase{
                 HealingPotion pot = new MediumHealingPotion();
 		player.takeDamage(25);
                 player.useHealingPotion(pot);
-                assertEquals(player.getHealthpoint(),85);
-	}
-
-    /**
-     *
-     */
-    @Test
-	public void testUseSharpeningPotion() {
-		fail("Not yet implemented"); // TODO
+                assertEquals(85,player.getHealthpoint());
 	}
 
     /**

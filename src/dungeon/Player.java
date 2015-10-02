@@ -185,7 +185,7 @@ public class Player {
      */
     public void useHealingPotion(HealingPotion p){
 		if(this.getHealthpoint() + p.getHealingPoints() <= this.getMaxHealth()){
-			this.setHealthpoint(this.getMaxHealth() + p.getHealingPoints());
+			this.setHealthpoint(this.getHealthpoint() + p.getHealingPoints());
 		}else{
 			this.setHealthpoint(this.getMaxHealth());
 		}

@@ -2,7 +2,6 @@ package dungeonTest;
 
 import dungeon.ConcreteDungeon;
 import junit.framework.TestCase;
-import static org.junit.Assert.*;
 
 import org.junit.Test;
 
@@ -29,48 +28,10 @@ public class ConcreteDungeonTest extends TestCase{
      *
      */
     @Test
-	public void testSetCurrentRoom() {
-		fail("Not yet implemented"); // TODO
-	}
-
-    /**
-     *
-     */
-    @Test
-	public void testGetPlayer() {
-		fail("Not yet implemented"); // TODO
-	}
-
-    /**
-     *
-     */
-    @Test
-	public void testRemoveObject() {
-		fail("Not yet implemented"); // TODO
-	}
-
-    /**
-     *
-     */
-    @Test
-	public void testInterpretCommand() {
-		fail("Not yet implemented"); // TODO
-	}
-
-    /**
-     *
-     */
-    @Test
 	public void testIsFinished() {
-		fail("Not yet implemented"); // TODO
-	}
-
-    /**
-     *
-     */
-    @Test
-	public void testGameFinished() {
-		fail("Not yet implemented"); // TODO
+		assertFalse(dun.isFinished());
+                dun.gameFinished();
+                assertTrue(dun.isFinished());
 	}
 
     /**
@@ -78,7 +39,8 @@ public class ConcreteDungeonTest extends TestCase{
      */
     @Test
 	public void testRoomHasHiddenExit() {
-		fail("Not yet implemented"); // TODO
+		assertTrue(dun.roomHasHiddenExit());
+                dun.setCurrentRoom(dun.getCurrentRoom().getNearRooms().get("East"));
+                assertFalse(dun.roomHasHiddenExit());
 	}
-
 }
