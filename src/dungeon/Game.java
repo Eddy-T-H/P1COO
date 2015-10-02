@@ -23,6 +23,10 @@ public class Game {
 		this.dungeons.add(new ConcreteDungeon());
 	}
 	
+	public Game(Player p){
+		this.dungeons.add(new ConcreteDungeon(p));
+	}
+	
 	
 	//Methods
 	public void start(){
