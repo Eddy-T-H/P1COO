@@ -5,7 +5,7 @@ public class ButtonCommand implements InterfaceCommand {
 
 	@Override
 	public void action(String command, AbstractDungeon dungeon) {
-		dungeon.currentRoom.exit(dungeon, command);
+		dungeon.currentRoom.action(command, dungeon);
 	}
 
 }

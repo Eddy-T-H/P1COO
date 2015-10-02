@@ -11,9 +11,8 @@ public class HiddenExit extends ExitDecorator{
 
     @Override
     public boolean canExit(AbstractDungeon dungeon) {
-    	System.out.println(this.room.getClass().getSimpleName());
-    	if(dungeon.getCurrentRoom().getClass().getSimpleName().equals("ButtonRoom")){
-    		return (((ButtonRoom)dungeon.getCurrentRoom()).isButtonPushed());
+    	if(dungeon.getCurrentRoom().getRoom().getClass().getSimpleName().equals("ButtonRoom")){
+    		return (((ButtonRoom)dungeon.getCurrentRoom().getRoom()).isButtonPushed());
     	}else
     		return !isHidden;
     }
