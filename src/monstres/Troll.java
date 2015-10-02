@@ -6,8 +6,6 @@ package monstres;
  */
 public class Troll extends Monster{	
 	
-	// Troll Constructor
-
     /**
      * Troll Builder
      */

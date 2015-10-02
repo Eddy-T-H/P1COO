@@ -4,11 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import stuff.Fists;
-import stuff.HealingPotion;
-import stuff.SharpeningPotion;
-import stuff.Stuff;
-import stuff.Weapon;
+import stuff.*;
 
 /**
  * Player class
@@ -195,15 +191,7 @@ public class Player {
 		}
 		this.getInventory().remove(p);
 	}
-	
-	/**
-	 * Use the sharpening potion on a weapon and improve its abilities by 20%
-	 * @param sp sharpeningpotion used
-	 * @param w weapon improved
-	 */
-	public void useSharpeningPotion(SharpeningPotion sp, Weapon w){
-		sp.effectOnWeapon(w);
-	}
+
 	
     /**
      * Check if the player dead

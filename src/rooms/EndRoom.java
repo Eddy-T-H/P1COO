@@ -2,13 +2,14 @@ package rooms;
 import dungeon.AbstractDungeon;
 
 /**
- *
- * @author 
+ *	EndRoom
+ * Final Room
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class EndRoom extends Room {
 	
     /**
-     *
+     * Builder
      * @param description
      */
     public EndRoom(String description){
@@ -16,9 +17,9 @@ public class EndRoom extends Room {
 	}
 
     /**
-     *
-     * @param command
-     * @param dungeon
+     * Proceed with the user entry
+     * @param command user entry
+     * @param dungeon current dungeon
      */
     @Override
 	public void action(String command, AbstractDungeon dungeon) {
