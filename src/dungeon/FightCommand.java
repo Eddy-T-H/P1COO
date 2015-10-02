@@ -1,5 +1,6 @@
 package dungeon;
 
+import java.util.Random;
 import java.util.Scanner;
 
 import monstres.Monster;
@@ -7,9 +8,9 @@ import rooms.MonsterRoom;
 import stuff.Stuff;
 
 public class FightCommand implements InterfaceCommand {
-	
+
 	Scanner sc = new Scanner(System.in);
-	
+
 	@Override
 	public void action(String command1, AbstractDungeon dungeon) {
 		if (dungeon.getCurrentRoom().getRoom().getClass().getSimpleName().toLowerCase().equals("monsterroom")) {
@@ -30,7 +31,7 @@ public class FightCommand implements InterfaceCommand {
 
 				break;
 			case "use":
-				if(player.emptyInventory()){
+				if (player.emptyInventory()) {
 					System.out.println("You have no item !\n");
 					break;
 				}
@@ -38,18 +39,32 @@ public class FightCommand implements InterfaceCommand {
 				System.out.println("which item do you to use?");
 				command1 = sc.nextLine();
 				Stuff item = player.getItemFromInventoryFromString(command1);
-				
-				if(item == null){
+
+				if (item == null) {
 					System.out.println("you don't have this item");
 					break;
 				}
 				item = player.getItemFromInventoryFromString(command1);
 				player.useItem(item);
-			
+
 				break;
 			case "flee":
-				
-				
+
+				Random rm = new Random();
+				int dir = rm.nextInt(4);
+
+				if (dir == 0) {
+
+				} else if (dir == 1) {
+
+				} else if (dir == 2l) {
+
+				} else{
+
+				}
+
+				break;
+
 			default:
 				System.out.println("Entity unrecognized");
 			}
