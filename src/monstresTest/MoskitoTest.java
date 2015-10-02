@@ -12,7 +12,7 @@ import org.junit.Test;
  */
 public class MoskitoTest extends TestCase {
     
-        private Monster monster;
+        protected Monster monster;
         
     @Override
     protected void setUp() throws Exception {
@@ -55,7 +55,7 @@ public class MoskitoTest extends TestCase {
      */
     @Test
 	public void testGetName() {
-            assertEquals(monster.getDamageRange(),"Moskito");
+            assertEquals(monster.getName(),"Moskito");
 	}
 
     /**

@@ -50,6 +50,7 @@ public abstract class Weapon extends Stuff  {
 		this.damageRange = damageRange;
 	}
 	
+        @Override
 	public String toString(){
 		return  this.getItemName() + ". \n"
 				+ "Base damage : " + this.getBaseDamage() + ".\n"

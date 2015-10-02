@@ -16,7 +16,7 @@ import org.junit.Test;
  */
 public class TrollTest extends TestCase {
     
-        private Monster monster;
+        protected Monster monster;
         
     @Override
     protected void setUp() throws Exception {
@@ -59,7 +59,7 @@ public class TrollTest extends TestCase {
      */
     @Test
 	public void testGetName() {
-            assertEquals(monster.getDamageRange(),"Troll");
+            assertEquals(monster.getName(),"Troll");
 	}
 
     /**

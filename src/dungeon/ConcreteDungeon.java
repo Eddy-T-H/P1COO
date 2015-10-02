@@ -13,7 +13,7 @@ import rooms.*;
 public class ConcreteDungeon extends AbstractDungeon {
 
     /**
-     *
+     * Constrcutor without param
      */
     public ConcreteDungeon(){
 		Room room;
@@ -38,8 +38,8 @@ public class ConcreteDungeon extends AbstractDungeon {
 	// For level2+
 
     /**
-     *
-     * @param p
+     * ConcreteDungeon's constructor with a player as param
+     * @param p the player from the last dungeon
      */
     	public ConcreteDungeon(Player p){
 		Room room;
