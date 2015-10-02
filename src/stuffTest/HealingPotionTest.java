@@ -1,8 +1,6 @@
 package stuffTest;
 
 import junit.framework.TestCase;
-import monstres.Moskito;
-import static org.junit.Assert.*;
 
 import org.junit.Test;
 import stuff.HealingPotion;

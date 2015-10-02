@@ -88,9 +88,9 @@ public abstract class AbstractDungeon {
      */
     public boolean roomHasHiddenExit(){
 		for (Map.Entry<String, Room> roomRow : currentRoom.getNearRooms().entrySet()){
-            if(roomRow.getValue().getClass().getSimpleName().equals("HiddenExit")){
-            	((HiddenExit)roomRow.getValue()).discoverExit();
-            	return true;
+                    if(roomRow.getValue().getClass().getSimpleName().equals("HiddenExit")){
+                        ((HiddenExit)roomRow.getValue()).discoverExit();
+                        return true;
             }
         }
 		return false;

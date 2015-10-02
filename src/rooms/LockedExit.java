@@ -1,7 +1,6 @@
 package rooms;
 
 import dungeon.AbstractDungeon;
-import stuff.Key;
 
 /**
  *
