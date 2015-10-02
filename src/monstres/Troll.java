@@ -1,15 +1,15 @@
 package monstres;
 
 /**
- *
- * @author
+ * Troll Clas
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class Troll extends Monster{	
 	
 	// Troll Constructor
 
     /**
-     *
+     * Troll Builder
      */
     	public Troll(){
 		super.name="Troll";

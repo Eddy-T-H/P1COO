@@ -1,15 +1,16 @@
 package dungeon;
 
 /**
- *
- * @author
+ *	ButtonCommand Class 
+ *	Proceed with the push input
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class ButtonCommand implements InterfaceCommand {
 
     /**
-     *
-     * @param command
-     * @param dungeon
+     *	Proceed with the 'push' input
+     * @param command entered by the user
+     * @param dungeon where the game take place
      */
     @Override
 	public void action(String command, AbstractDungeon dungeon) {

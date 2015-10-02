@@ -7,8 +7,9 @@ import java.util.Scanner;
 import rooms.*;
 
 /**
- *
- * @author
+ * Game class
+ * Used to launch the game and get the user inputs
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class Game {
 	
@@ -24,15 +25,15 @@ public class Game {
 	//Constructor
 
     /**
-     *
+     * Builder used to start a game
      */
     	public Game(){
 		this.dungeons.add(new ConcreteDungeon());
 	}
 	
     /**
-     *
-     * @param p
+     * Builder used to start a game with a specified player (for level 2+)
+     * @param p player
      */
     public Game(Player p){
 		this.dungeons.add(new ConcreteDungeon(p));
@@ -42,15 +43,15 @@ public class Game {
 	//Methods
 
     /**
-     *
+     * Void method that launch the game
      */
     	public void start(){
 		this.dungeons.get(currentDungeon);
 	}
 	
     /**
-     *
-     * @param instruction
+     * Method that get an user entry and proceed to the interpretation
+     * @param instruction user entry
      */
     public void getUserEntry(String instruction){
 		System.out.printf(instruction);
@@ -59,24 +60,24 @@ public class Game {
 	}
 	
     /**
-     *
-     * @return
+     *	Getter for the currentDungeon
+     * @return currentDungeon
      */
     public AbstractDungeon getCurrentDungeon(){
 		return this.dungeons.get(this.currentDungeon);
 	}
 	
     /**
-     *
-     * @return
+     * Getter for the currentRoom
+     * @return currentRoom
      */
     public Room getCurrentRoom(){
 		return this.getCurrentDungeon().getCurrentRoom().getRoom();
 	}
 	
     /**
-     *
-     * @return
+     *	Boolean used to check if the player is stuck in a monsterRoom
+     * @return boolean
      */
     public boolean isStuckInMonsterRoom(){
 		if(this.getCurrentRoom().getRoom().getClass().getSimpleName().toLowerCase().equals("monsterroom")){
@@ -88,15 +89,15 @@ public class Game {
 	}
 	
     /**
-     *
-     * @return
+     * Getter for the player
+     * @return player
      */
     public Player getPlayer(){
 		return this.getCurrentDungeon().getPlayer();
 	}
 	
     /**
-     *
+     * Void method used to launch the game
      */
     public void launchGame(){
         while(this.currentDungeon!=dungeons.size()){
@@ -117,7 +118,7 @@ public class Game {
 	}
 	
     /**
-     *
+     * Void method that asks for a userEntry and starts the proceeding
      */
     public void interpretCommand(){
 		String[] splittedCommand;

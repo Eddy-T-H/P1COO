@@ -12,7 +12,7 @@ import stuff.Weapon;
 
 /**
  *
- * @author
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class PlayerTest extends TestCase{
     

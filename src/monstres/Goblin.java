@@ -1,15 +1,15 @@
 package monstres;
 
 /**
- *
- * @author
+ *	Goblin Class
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class Goblin extends Monster{
 
 	// Goblin constructor
 
     /**
-     *
+     * Create a new Goblin
      */
     	public Goblin(){
 		super.name="Goblin";

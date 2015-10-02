@@ -2,15 +2,16 @@ package dungeon;
 import rooms.ExitDecorator;
 
 /**
- *
- * @author
+ * ObjectCommand Class
+ * Proceed with the take command
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class ObjectCommand implements InterfaceCommand {
 
     /**
-     *
-     * @param command
-     * @param dungeon
+     *  Proceed with the take command
+     * @param command entered by the user
+     * @param dungeon where the game is being played
      */
     @Override
 	public void action(String command, AbstractDungeon dungeon) {

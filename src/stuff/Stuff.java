@@ -2,7 +2,7 @@ package stuff;
 
 /**
  *
- * @author
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public abstract class Stuff {
 	private String itemName;

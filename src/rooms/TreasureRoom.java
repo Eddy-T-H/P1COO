@@ -8,7 +8,7 @@ import stuff.Stuff;
 
 /**
  * This class is the treasure room which contain a chest with several objects in it.
- * @author
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class TreasureRoom extends Room {
 	

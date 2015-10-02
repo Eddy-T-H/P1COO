@@ -12,7 +12,7 @@ import org.junit.Test;
 
 /**
  * Test class for the class Goblin
- * @author
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class GoblinTest extends TestCase {
     
