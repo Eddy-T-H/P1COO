@@ -87,7 +87,7 @@ public class Game {
 					(new ButtonCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
 					break;
 				case "take":
-					(new ObjectCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
+					(new ObjectCommand()).action(splittedCommand[0], this.dungeons.get(currentDungeon));
 					break;
 				case "use":
 					(new ObjectCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
