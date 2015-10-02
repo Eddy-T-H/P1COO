@@ -1,7 +1,7 @@
 package stuff;
 
 
-public abstract class Weapon extends Stuff {
+public abstract class Weapon extends Stuff  {
 	
 	//Attributes
 	/** 
@@ -43,4 +43,5 @@ public abstract class Weapon extends Stuff {
 				+ "Base damage : " + this.getBaseDamage() + ".\n"
 						+ "Damage range : " + this.getDamageRange() + ".\n";
 	}
+
 }

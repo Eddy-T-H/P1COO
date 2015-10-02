@@ -77,6 +77,19 @@ public class Player {
 		}
 	}
 
+	public Stuff getItemFromInventoryFromString(String nameObject) {
+		if (!(inventory.isEmpty())) {
+			for (Stuff object : inventory) {
+				if ((object.getClass().getSimpleName().toLowerCase()).equals(nameObject)) {
+					return object;
+				}
+			}
+			return null;
+		} else {
+			return null;
+		}
+	}
+	
 	public int damagePlayer(){
 		return this.getEquipedWeapon().getBaseDamage()+
 				(int)(Math.random()*(double)this.getEquipedWeapon().getDamageRange()); 
@@ -96,6 +109,7 @@ public class Player {
 		}else{
 			this.setHealthpoint(this.getMaxHealth());
 		}
+		this.getInventory().remove(p);
 	}
 	
 	/**
@@ -113,6 +127,31 @@ public class Player {
 		}else{
 			return false;
 		}
+	}
+	
+	public void equipWeapon(Weapon newWeapon ){
+		if(!(this.getEquipedWeapon() instanceof Fists))
+		{	
+			addObject(this.getEquipedWeapon());	
+		}
+		this.setEquipedWeapon(newWeapon);
+	}
+	
+	public boolean emptyInventory(){
+		for(Stuff f:inventory){
+			if(f != null){
+				return true;
+			}
+		}
+		return true;
+	}
+	
+	public void useItem(Stuff item){
+		if (item instanceof Weapon){
+			this.equipWeapon((Weapon)item);
+		}else if(item instanceof HealingPotion){
+			this.useHealingPotion((HealingPotion)item);
+		}		
 	}
 	
 }
