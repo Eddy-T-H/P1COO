@@ -2,14 +2,15 @@ package rooms;
 import dungeon.AbstractDungeon;
 
 /**
- *
- * @author 
+ * HiddenExit Class
+ * 
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class HiddenExit extends ExitDecorator{
     private boolean isHidden;
     
     /**
-     *
+     *	Builder
      * @param room
      */
     public HiddenExit(Room room){
@@ -18,9 +19,9 @@ public class HiddenExit extends ExitDecorator{
     }
 
     /**
-     *
-     * @param dungeon
-     * @return
+     * Test if the exit has been discovered and can be leaved
+     * @param dungeon current dungeon
+     * @return true or false
      */
     @Override
     public boolean canExit(AbstractDungeon dungeon) {
@@ -31,7 +32,7 @@ public class HiddenExit extends ExitDecorator{
     }
     
     /**
-     *
+     * Set the exit to discovered
      */
     public void discoverExit(){
     	this.isHidden=false;

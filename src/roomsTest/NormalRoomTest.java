@@ -7,7 +7,12 @@ import org.junit.Test;
 public class NormalRoomTest {
 
 	@Test
-	public void test() {
+	public void testAction() {
+		fail("Not yet implemented"); // TODO
+	}
+
+	@Test
+	public void testNormalRoom() {
 		fail("Not yet implemented"); // TODO
 	}
 

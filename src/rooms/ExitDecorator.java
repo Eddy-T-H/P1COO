@@ -6,27 +6,28 @@ import java.util.Map;
 import dungeon.AbstractDungeon;
 
 /**
- *
- * @author 
+ * Exit Decorator
+ * Uses the decorated pattern to link rooms through exits
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public abstract class ExitDecorator extends Room {
 
     /**
-     *
+     * Attribute room
      */
     protected Room room;
 		
     /**
-     *
-     * @return
+     * Getter for Room
+     * @return room
      */
     public Room getRoom(){
         return this.room;
     }
     
     /**
-     *
-     * @return
+     * Getter for description room
+     * @return description room
      */
     @Override
     public String getDescriptionRoom(){
@@ -34,9 +35,9 @@ public abstract class ExitDecorator extends Room {
     }
                 
     /**
-     *
-     * @param dungeon
-     * @param command
+     * Method exit used to leave a room
+     * @param dungeon current dungeon
+     * @param command user command
      */
     @Override
                 public void exit(AbstractDungeon dungeon, String command){
@@ -56,16 +57,16 @@ public abstract class ExitDecorator extends Room {
             }
                     
     /**
-     *
-     * @param dungeon
-     * @return
+     *	Test if room can be leaved
+     * @param dungeon current dungeon
+     * @return true if room can be leaved
      */
     public abstract boolean canExit(AbstractDungeon dungeon);
                 
     /**
-     *
-     * @param command
-     * @param dungeon
+     * Proceed with the user entry
+     * @param command user entry
+     * @param dungeon current dungeon
      */
     @Override
       public void action(String command, AbstractDungeon dungeon) {

@@ -5,7 +5,7 @@ import stuff.Key;
 
 /**
  *
- * @author 
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class LockedExit extends ExitDecorator{
     
@@ -21,9 +21,9 @@ public class LockedExit extends ExitDecorator{
 	}
 
     /**
-     *
-     * @param dungeon
-     * @return
+     * Test if the exit has been unlocked and can be leaved
+     * @param dungeon current dungeon
+     * @return true or false
      */
     @Override
     public boolean canExit(AbstractDungeon dungeon) {

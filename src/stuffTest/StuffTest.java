@@ -7,7 +7,12 @@ import org.junit.Test;
 public class StuffTest {
 
 	@Test
-	public void test() {
+	public void testGetItemName() {
+		fail("Not yet implemented"); // TODO
+	}
+
+	@Test
+	public void testSetItemName() {
 		fail("Not yet implemented"); // TODO
 	}
 

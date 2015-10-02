@@ -7,7 +7,7 @@ import org.junit.Test;
 public class TrapRoomTest {
 
 	@Test
-	public void test() {
+	public void testAction() {
 		fail("Not yet implemented"); // TODO
 	}
 

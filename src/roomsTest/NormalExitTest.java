@@ -7,7 +7,12 @@ import org.junit.Test;
 public class NormalExitTest {
 
 	@Test
-	public void test() {
+	public void testCanExit() {
+		fail("Not yet implemented"); // TODO
+	}
+
+	@Test
+	public void testNormalExit() {
 		fail("Not yet implemented"); // TODO
 	}
 
