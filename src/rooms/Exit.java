@@ -47,7 +47,7 @@ public abstract class Exit extends Room {
 		boolean success = false;
 		for (Map.Entry<String, Room> roomRow : dungeon.getCurrentRoom().getNearRooms().entrySet()) {
 			if (roomRow.getKey().toLowerCase().equals(command.toLowerCase())) {
-				if (((ExitDecorator) roomRow.getValue()).canExit(dungeon)) {
+				if (((Exit) roomRow.getValue()).canExit(dungeon)) {
 					dungeon.setCurrentRoom(roomRow.getValue());
 					if (roomRow.getValue().getRoom().isAnEndRoom()) {
 						System.out.println("Won !");
