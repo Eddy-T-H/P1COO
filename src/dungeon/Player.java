@@ -16,6 +16,11 @@ public class Player {
 	public List<Stuff> inventory = new ArrayList<>();
 	public Weapon equipedWeapon ;
 	
+	// Builder
+	
+	public Player(){
+		this.setEquipedWeapon(new Fists());
+	}
 	
 	//Methods
 	public int getMaxHealth() {
