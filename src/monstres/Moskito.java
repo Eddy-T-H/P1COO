@@ -1,13 +1,13 @@
 package monstres;
 
 /**
- *
- * @author
+ * Moskito Class
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class Moskito extends Monster {
 	
     /**
-     *
+     * Moskito Builder
      */
     public Moskito(){
 		super.name="Moskito";

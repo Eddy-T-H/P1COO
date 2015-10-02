@@ -1,8 +1,8 @@
 package monstres;
 
 /**
- *
- * @author
+ * Monster class (abstract)
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public abstract class Monster {
 	
@@ -25,40 +25,40 @@ public abstract class Monster {
     protected String name ;
 	
     /**
-     *
-     * @return
+     * Getter for the HP
+     * @return HP
      */
     public int getHealthPoint() {
 		return healthPoint;
 	}
 
     /**
-     *
-     * @return
+     * Calculates the damage done forone hit
+     * @return damage done
      */
     public int getBaseDamage() {
 		return baseDamage;
 	}
 
     /**
-     *
-     * @return
+     * Getter for the damage range
+     * @return damage range
      */
     public int getDamageRange() {
 		return damageRange;
 	}
 
     /**
-     *
-     * @return
+     * Getter for the name
+     * @return name
      */
     public String getName() {
 		return name;
 	}
 
     /**
-     *
-     * @param dmg
+     * Hits the monster
+     * @param dmg damage taken
      */
     public void takeDamage(int dmg){
 		

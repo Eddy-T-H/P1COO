@@ -1,15 +1,16 @@
 package dungeon;
 
 /**
- *
- * @author
+ * DescriptionCommand Classe
+ * Proceed with the get description command
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class DescriptionCommand implements InterfaceCommand {
 	
     /**
-     *
-     * @param command
-     * @param dungeon
+     *  Proceed with the get description command
+     * @param command entered by the user
+     * @param dungeon where the game is being played
      */
     @Override
 	public void action(String command, AbstractDungeon dungeon) {

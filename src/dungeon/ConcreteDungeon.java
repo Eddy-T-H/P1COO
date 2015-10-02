@@ -7,13 +7,13 @@ import stuff.*;
 import rooms.*;
 
 /**
- *
- * @author
+ * Class representing a dungeon
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class ConcreteDungeon extends AbstractDungeon {
 
     /**
-     * Constrcutor without param
+     * Construcutor without param
      */
     public ConcreteDungeon(){
 		Room room;

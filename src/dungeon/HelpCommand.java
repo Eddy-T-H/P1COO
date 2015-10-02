@@ -1,15 +1,16 @@
 package dungeon;
 
 /**
- *
- * @author 
+ * HelpCommand class
+ * Proceed with the help command
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class HelpCommand implements InterfaceCommand{
 
     /**
-     *
-     * @param command
-     * @param dungeon
+     *  Proceed with the help command
+     * @param command entered by the user
+     * @param dungeon where the game is being played
      */
     @Override
 	public void action(String command, AbstractDungeon dungeon) {

@@ -8,17 +8,18 @@ import rooms.MonsterRoom;
 import stuff.Stuff;
 
 /**
- *
- * @author
+ * FightCommand Class
+ * Proceed with the fight command
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class FightCommand implements InterfaceCommand {
 
 	Scanner sc = new Scanner(System.in);
 
     /**
-     *
-     * @param command1
-     * @param dungeon
+     *  Proceed with the fight command
+     * @param command1 entered by the user
+     * @param dungeon where the game is being played
      */
     @Override
 	public void action(String command1, AbstractDungeon dungeon) {
