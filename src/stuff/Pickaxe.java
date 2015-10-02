@@ -1,15 +1,13 @@
 package stuff;
 
 /**
- *
- * @author
+ * Pickaxe Class
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class Pickaxe extends Weapon {
 
-	// Pickaxe constructor
-
     /**
-     *
+     * Builder
      */
     	public Pickaxe(){
 		this.baseDamage = 5;

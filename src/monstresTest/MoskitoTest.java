@@ -8,7 +8,7 @@ import org.junit.Test;
 
 /**
  * Test class for the class Moskito
- * @author
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class MoskitoTest extends TestCase {
     
@@ -82,7 +82,7 @@ public class MoskitoTest extends TestCase {
      */
     @Test
 	public void testDamageMonster() {
-		assertTrue(monster.damageMonster()<=(monster.getBaseDamage()+monster.getDamageRange()));
+		fail("Not yet implemented"); // TODO
 	}
 
 }

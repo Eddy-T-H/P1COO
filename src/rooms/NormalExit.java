@@ -3,12 +3,12 @@ import dungeon.AbstractDungeon;
 
 /**
  *
- * @author
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class NormalExit extends ExitDecorator{
 	
     /**
-     *
+     * Builder
      * @param room
      */
     public NormalExit(Room room){
@@ -16,9 +16,9 @@ public class NormalExit extends ExitDecorator{
 	}
 
     /**
-     *
-     * @param dungeon
-     * @return
+     * Test if the exit can be leaved
+     * @param dungeon current dungeon
+     * @return true or false
      */
     @Override
 	public boolean canExit(AbstractDungeon dungeon) {

@@ -1,15 +1,13 @@
 package stuff;
 
 /**
- *
- * @author
+ * GreatHammer Class
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class GreatHammer extends Weapon {
 
-	// Great Hammer constructor
-
     /**
-     *
+     * Builder
      */
     	public GreatHammer(){
 		this.baseDamage = 25;

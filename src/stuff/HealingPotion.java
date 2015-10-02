@@ -4,7 +4,7 @@ import dungeon.Player;
 
 /**
  *
- * @author
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public abstract class HealingPotion extends Stuff{
 

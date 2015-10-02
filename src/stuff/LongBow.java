@@ -1,15 +1,13 @@
 package stuff;
 
 /**
- *
- * @author
+ * LongBow Class
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class LongBow extends Weapon {
 
-	// LongBow constructor
-
     /**
-     *
+     * Builder
      */
     	public LongBow(){
 		this.baseDamage = 20;

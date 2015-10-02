@@ -1,15 +1,13 @@
 package stuff;
 
 /**
- *
- * @author
+ * Short Sword Class
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class ShortSword extends Weapon {
 
-	// ShortSword constructor
-
     /**
-     *
+     * Builder
      */
     	public ShortSword(){
 		this.baseDamage = 10;

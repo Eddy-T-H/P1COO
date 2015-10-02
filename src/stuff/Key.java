@@ -1,23 +1,20 @@
 package stuff;
 
 /**
- *
- * @author
+ * Key class
+ * Used to open a locked door
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class Key extends Stuff {
 
-
-	// Constructor
-
     /**
-     *
+     * Builder
      */
     	public Key(){
 	}
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
+		return "Key \n";
 	}
 }
