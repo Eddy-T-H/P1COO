@@ -1,23 +1,24 @@
 package stuff;
 
 /**
- *
+ * Stuff class. 
+ * Defines the items
  * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public abstract class Stuff {
 	private String itemName;
 	
     /**
-     *
-     * @return
+     * Getter for itemName
+     * @return item name
      */
     public String getItemName(){
 		return this.itemName;
 	}
 
     /**
-     *
-     * @param itemName
+     * Setter for itemName
+     * @param itemName new name
      */
     public void setItemName(String itemName) {
 		this.itemName = itemName;

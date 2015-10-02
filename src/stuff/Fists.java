@@ -1,15 +1,13 @@
 package stuff;
 
 /**
- *
- * @author
+ * Fist Class
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class Fists extends Weapon {
 
-	// Fists constructor
-
     /**
-     *
+     * Builder
      */
     	public Fists(){
 		this.baseDamage = 2;

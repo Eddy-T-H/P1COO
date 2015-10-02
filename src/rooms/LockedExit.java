@@ -12,7 +12,7 @@ public class LockedExit extends Exit{
 	boolean locked;
 	
     /**
-     *
+     *Builder
      * @param room
      */
     public LockedExit(Room room){

@@ -1,12 +1,12 @@
 package stuff;
 
 /**
- *
+ * Weapon Class
  * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public abstract class Weapon extends Stuff  {
 	
-	//Attributes
+
 	/**
 	 * Base damage of the weapon
 	 */
@@ -19,32 +19,32 @@ public abstract class Weapon extends Stuff  {
 	// Methods - Getters and Setters
 
     /**
-     *
-     * @return
+     * Getter for the base damage
+     * @return base damage
      */
     	public int getBaseDamage(){
 		return this.baseDamage;
 	}
 	
     /**
-     *
-     * @return
+     * Getter for the damage range
+     * @return damage range
      */
     public int getDamageRange(){
 		return this.damageRange;
 	}
 
     /**
-     *
-     * @param baseDamage
+     * Setter for the base damage
+     * @param baseDamage new base damage
      */
     public void setBaseDamage(int baseDamage) {
 		this.baseDamage = baseDamage;
 	}
 
     /**
-     *
-     * @param damageRange
+     * setter for the damage range
+     * @param damageRange new damagerange
      */
     public void setDamageRange(int damageRange) {
 		this.damageRange = damageRange;

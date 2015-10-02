@@ -5,8 +5,8 @@ import java.util.Map;
 import dungeon.AbstractDungeon;
 
 /**
- *
- * @author 
+ * Room Class
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public abstract class Room {
 	private String descriptionRoom="";
@@ -14,41 +14,41 @@ public abstract class Room {
 	private Map<String,Room> around = new HashMap<>();
 	
     /**
-     *
-     * @param description
+     * Setter for the description
+     * @param description new description
      */
     protected void setDescriptionRoom (String description){
 		this.descriptionRoom=description;
 	}
 
     /**
-     *
-     * @return
+     * Getter for this object
+     * @return this room
      */
     public Room getRoom(){
 		return this;
 	}
 	
     /**
-     *
-     * @return
+     * Getter for the description
+     * @return description
      */
     public String getDescriptionRoom(){
 		return this.descriptionRoom;
 	}
 	
     /**
-     *
-     * @return
+     * Getter for the description around
+     * @return description around
      */
     public String getDescriptionAround(){
 		return this.descriptionAround;
 	}
 	
     /**
-     *
-     * @param placementKey
-     * @param room
+     * Place a room next to this one.
+     * @param placementKey direction
+     * @param room object room
      */
     public void addNearRoom(String placementKey, Room room){
 		this.around.put(placementKey,room);
@@ -75,24 +75,24 @@ public abstract class Room {
 	}
 
     /**
-     *
-     * @return
+     * Getter for rooms around
+     * @return rooms
      */
     public Map<String,Room> getNearRooms(){
 		return this.around;
 	}
         
     /**
-     *
-     * @param dungeon
-     * @param command
+     * Method used to leave the round
+     * @param dungeon current dungeon
+     * @param command user command
      */
     public void exit(AbstractDungeon dungeon, String command){}
 	
     /**
-     *
-     * @param command
-     * @param dungeon
+     * Proceed with the user entry
+     * @param command user entry
+     * @param dungeon current dungeon
      */
     abstract public void action(String command, AbstractDungeon dungeon);
 }

@@ -3,7 +3,7 @@ import dungeon.AbstractDungeon;
 
 /**
  *
- * @author
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class NormalRoom extends Room {
 	

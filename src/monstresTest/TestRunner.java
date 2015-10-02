@@ -11,7 +11,7 @@ import org.junit.runner.notification.Failure;
 
 /**
  *
- * @author Antoine
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class TestRunner {
 

@@ -8,7 +8,7 @@ import org.junit.Test;
 
 /**
  *
- * @author
+ * @author Antoine Bondin, Eddy Thockler & Hugo Chaumette
  */
 public class ConcreteDungeonTest extends TestCase{
     protected ConcreteDungeon dun;
