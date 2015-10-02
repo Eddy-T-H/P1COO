@@ -141,7 +141,7 @@ public class Player {
 	public boolean emptyInventory(){
 		for(Stuff f:inventory){
 			if(f != null){
-				return true;
+				return false;
 			}
 		}
 		return true;
@@ -170,6 +170,7 @@ public class Player {
 				System.out.println("you don't have this item");
 			}else{
 				item = this.getItemFromInventoryFromString(command1);
+				System.out.println("Item used : " + item.getItemName());
 				this.useItem(item);
 			}
 		}

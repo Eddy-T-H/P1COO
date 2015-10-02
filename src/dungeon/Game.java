@@ -90,7 +90,7 @@ public class Game {
 					(new ObjectCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
 					break;
 				case "use":
-					(new ObjectCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
+					(new UseCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
 					break;
 				case "move":
 					(new MoveCommand()).action(splittedCommand[1], this.dungeons.get(currentDungeon));
