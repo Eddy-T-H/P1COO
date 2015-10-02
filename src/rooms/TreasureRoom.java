@@ -7,7 +7,7 @@ import dungeon.AbstractDungeon;
 import stuff.Stuff;
 
 /**
- *
+ * This class is the treasure room which contain a chest with several objects in it.
  * @author
  */
 public class TreasureRoom extends Room {
@@ -15,9 +15,9 @@ public class TreasureRoom extends Room {
 	List<Stuff> chest = new ArrayList<>();
 	
     /**
-     *
-     * @param theObjects
-     * @param description
+     * Constructor for the treasure room class
+     * @param theObjects the content of the chest
+     * @param description the description of the room
      */
     public TreasureRoom(List<Stuff> theObjects, String description){
 		
@@ -35,9 +35,9 @@ public class TreasureRoom extends Room {
 	}
 	
     /**
-     *
-     * @param command
-     * @param dungeon
+     * Retrieve on object from the chest of the treasure room and then retrieve the object in the description
+     * @param command the object that the user want to retrieve of the chest
+     * @param dungeon the dungeon on which the player is
      */
     @Override
 	public void action(String command, AbstractDungeon dungeon) {
@@ -52,7 +52,7 @@ public class TreasureRoom extends Room {
 		if(taken){
 			System.out.println("You take the " + this.chest.get(objectToTake).getClass().getSimpleName());
 			dungeon.getPlayer().addObject(this.chest.get(objectToTake));
-            this.getDescriptionRoom().replace(this.chest.get(objectToTake).getClass().getSimpleName() + " ", "");
+                        this.getDescriptionRoom().replace(this.chest.get(objectToTake).getClass().getSimpleName() + " ", "");
 			this.chest.remove(objectToTake);
 		}
 		else{

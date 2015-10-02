@@ -11,7 +11,7 @@ import monstres.Monster;
 import org.junit.Test;
 
 /**
- *
+ * Test class for the class Goblin
  * @author
  */
 public class GoblinTest extends TestCase {
@@ -31,7 +31,7 @@ public class GoblinTest extends TestCase {
     }
 
     /**
-     *
+     * Test of the getHealthPoint method
      */
     @Test
 	public void testGetHealthPoint() {
@@ -39,7 +39,7 @@ public class GoblinTest extends TestCase {
 	}
 
     /**
-     *
+     * Test of the getBaseDamage method
      */
     @Test
 	public void testGetBaseDamage() {
@@ -47,7 +47,7 @@ public class GoblinTest extends TestCase {
 	}
 
     /**
-     *
+     * Test of the getDamageRange method
      */
     @Test
 	public void testGetDamageRange() {
@@ -55,7 +55,7 @@ public class GoblinTest extends TestCase {
 	}
 
     /**
-     *
+     * Test of the getName method
      */
     @Test
 	public void testGetName() {
@@ -63,7 +63,7 @@ public class GoblinTest extends TestCase {
 	}
 
     /**
-     *
+     * Test of the takeDamage method
      */
     @Test
 	public void testTakeDamage() {
@@ -72,7 +72,7 @@ public class GoblinTest extends TestCase {
 	}
 
     /**
-     *
+     * Test of the isAlive method
      */
     @Test
 	public void testIsAlive() {
@@ -82,7 +82,7 @@ public class GoblinTest extends TestCase {
 	}
 
     /**
-     *
+     * Test of the damageMonster method
      */
     @Test
 	public void testDamageMonster() {
